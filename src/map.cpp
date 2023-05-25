@@ -3,7 +3,11 @@
 void SNAKE::GridMap::init(){
     for(int i=0;i<size;i++){
         for(int j=0;j<size;j++){
-            map[i][j] = CellType::EMPTY;
+            if (i==0 || j==0 || i==size-1 || j==size-1)
+                map[i][j] = CellType::WALL;
+            else
+                map[i][j] = CellType::EMPTY;
+            // map[i][j] = CellType::EMPTY;
         }
     }
 }
@@ -33,9 +37,9 @@ double SNAKE::GridMap::getGridSize(){
 }
 
 void SNAKE::GridMap::showMap() const{
-    for(int i=0;i<size;i++){
-        for(int j=0;j<size;j++){
-            std::cout << static_cast<int>(map[i][j]) << " ";
+    for(int y=0;y<size;y++){
+        for(int x=0;x<size;x++){
+            std::cout << static_cast<int>(map[x][y]) << " ";
         }
         std::cout << std::endl;
     }

@@ -4,7 +4,7 @@
 #include "map.hpp"
 #include "food.hpp"
 #include <vector>
-
+#include <cstdlib>
 namespace SNAKE
 {
     enum class Direction{
@@ -44,12 +44,13 @@ namespace SNAKE
             Food *food;
             int x;
             int y;
-            Direction direction;
-            Direction lastdirection;
             int velocity;
             int lastvelocity;
             SnakeBlock* next;
             SnakeBlock* prev;
+        public:
+            Direction direction;
+            Direction lastdirection;
         public:
             SnakeBlock(GridMap*_map,Food* _food, int x,int y,Direction direction,int velocity,
             SnakeBlock* next = nullptr,SnakeBlock* prev = nullptr){
@@ -107,6 +108,7 @@ namespace SNAKE
                 switch (this->direction)
                 {
                 case Direction::UP:
+                    
                     this->map->setCell(this->x,this->y,CellType::EMPTY);
                     this->y -= this->velocity;
                     if (checkXY(this->x,this->y) == false){
@@ -154,12 +156,12 @@ namespace SNAKE
                 return this->move();
             };
             bool checkXY(int x,int y){
-                if(x < 0 || x >= this->map->getSize() || y < 0 || y >= this->map->getSize()){
-                    return false;
-                }
-                if (this->map->getCell(x,y) != CellType::EMPTY){
-                    return false;
-                }
+                // if(x < 0 || x >= this->map->getSize() || y < 0 || y >= this->map->getSize()){
+                //     return false;
+                // }
+                // if (this->map->getCell(x,y) != CellType::EMPTY){
+                //     return false;
+                // }
                 return true;
             };
 
@@ -187,6 +189,7 @@ namespace SNAKE
                     return false;
                 }
                 this->food->removeFoodAtXY(this->x,this->y);
+                this->map->setCell(this->x,this->y,CellType::OCCUPIED);
                 return true;
             };
 
@@ -207,7 +210,7 @@ namespace SNAKE
                 if (this->map->getCell(this->x,this->y) == CellType::OBSTACLE){
                     return true;
                 }
-
+                return false;
             }
     };
 
@@ -216,24 +219,19 @@ namespace SNAKE
             GridMap* map;
             Food* food;
             SnakeHead head;
-            std::vector<SnakeBlock> body;//body includes head
+            std::vector<SnakeBlock> body;//body excludes head
             int length;
             int velocity;
-            Direction direction;
-            Direction lastdirection;
             
         public:
             bool isDead;
             Snake(GridMap* _map,Food* _food,int x,int y,Direction direction,int velocity,int length = 1):
             head(_map,_food,x,y,direction,velocity),map(_map),food(_food){
                 this->length = length;
-                this->body.reserve(length);
+                this->body.reserve(length-1);
                 this->velocity = velocity;
-                this->direction = direction;
-                this->lastdirection = direction;
                 this->isDead = false;
                 this->map->setCell(x,y,CellType::OCCUPIED);
-                this->body.push_back(this->head);
             }
             int getLength(){
                 return this->length;
@@ -242,10 +240,10 @@ namespace SNAKE
                 return this->velocity;
             };
             Direction getDirection(){
-                return this->direction;
+                return this->head.getDirection();
             }
             Direction getLastDirection(){
-                return this->lastdirection;
+                return this->head.getLastDirection();
             }
             bool getIsDead(){
                 return this->isDead;
@@ -264,8 +262,8 @@ namespace SNAKE
                 this->velocity = velocity;
             }
             void setDirection(Direction direction){
-                this->lastdirection = this->direction;
-                this->direction = direction;
+                this->head.lastdirection = this->head.direction;
+                this->head.direction = direction;
             }
             void setIsDead(bool isDead){
                 this->isDead = isDead;
@@ -276,23 +274,23 @@ namespace SNAKE
             void setBody(std::vector<SnakeBlock> body){
                 this->body = body;
             }
-            void changeDirection(Direction direction){
-                if (direction == Direction::UP && this->lastdirection != Direction::DOWN){
-                    this->lastdirection = this->direction;
-                    this->direction = direction;
+            Direction changeDirection(Direction direction){
+                if (direction == Direction::UP && this->head.lastdirection != Direction::DOWN){
+                    return direction;
                 }
-                if (direction == Direction::DOWN && this->lastdirection != Direction::UP){
-                    this->lastdirection = this->direction;
-                    this->direction = direction;
+                if (direction == Direction::DOWN && this->head.lastdirection != Direction::UP){
+                    this->head.lastdirection = this->head.direction;
+                    return direction;
                 }
-                if (direction == Direction::LEFT && this->lastdirection != Direction::RIGHT){
-                    this->lastdirection = this->direction;
-                    this->direction = direction;
+                if (direction == Direction::LEFT && this->head.lastdirection != Direction::RIGHT){
+                    this->head.lastdirection = this->head.direction;
+                    return direction;
                 }
-                if (direction == Direction::RIGHT && this->lastdirection != Direction::LEFT){
-                    this->lastdirection = this->direction;
-                    this->direction = direction;
+                if (direction == Direction::RIGHT && this->head.lastdirection != Direction::LEFT){
+                    this->head.lastdirection = this->head.direction;
+                    return direction;
                 }
+                return this->head.direction;
             }
             
             bool move();

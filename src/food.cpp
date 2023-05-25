@@ -1,5 +1,5 @@
 #include "food.hpp"
-
+#include <cstdlib>
 bool SNAKE::Food::generateFoodAtXY(int x, int y)
 {
     if (map->getCell(x, y) == SNAKE::CellType::EMPTY)

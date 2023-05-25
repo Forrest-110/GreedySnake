@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/snake.dir/run.cpp.o -o snake  -Wl,-rpath,/home/zyf/Homework/GreedySnake/build libGreedySnake.so 

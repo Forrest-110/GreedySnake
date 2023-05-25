@@ -4,6 +4,7 @@ void SNAKE::VisualizeThread::run()
 {
     while (this->running)
     {
+        this->map->update();
         this->map->showMap();
         std::this_thread::sleep_for(std::chrono::milliseconds(this->interval));
     }

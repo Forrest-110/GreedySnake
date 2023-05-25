@@ -9,39 +9,61 @@ int main(){
     VisualizeThread vis(&map,100);
     map.init();
     Food food(&map);
-    food.generateNFoodRandomly(5);
+    food.generateNFoodRandomly(2);
     Snake snake(&map,&food,5,5,Direction::UP,1);
     vis.start();
+    // while (true){
+    //     char c=getch();
+    //     switch (c){
+    //         case 'w':
+    //             snake.move(Direction::UP);
+    //             break;
+    //         case 's':
+    //             snake.move(Direction::DOWN);
+    //             break;
+    //         case 'a':
+    //             snake.move(Direction::LEFT);
+    //             break;
+    //         case 'd':
+    //             snake.move(Direction::RIGHT);
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    //     std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    // }
     while (true)
     {
+        Direction nextdirection=snake.getDirection();
         if (_kbhit())
         {
-            char c = _getch();
+            char c = getch();
+            
             switch (c)
             {
             case 'w':
-                snake.changeDirection(Direction::UP);
+                nextdirection=snake.changeDirection(Direction::UP);
                 break;
             case 's':
-                snake.changeDirection(Direction::DOWN);
+                nextdirection=snake.changeDirection(Direction::DOWN);
                 break;
             case 'a':
-                snake.changeDirection(Direction::LEFT);
+                nextdirection=snake.changeDirection(Direction::LEFT);
                 break;
             case 'd':
-                snake.changeDirection(Direction::RIGHT);
+                nextdirection=snake.changeDirection(Direction::RIGHT);
                 break;
             default:
                 break;
             }
         }
-        snake.move();
+        snake.move(nextdirection);
         if (snake.isDead)
         {
             vis.stop();
             break;
         }
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     }
     
 }

@@ -3,10 +3,11 @@
 #include "map.hpp"
 #include <unordered_set>
 namespace SNAKE{
+
 class Object{
     private:
         GridMap* map;
-        std::unordered_set<Point> object_set;
+        std::unordered_set<Point,PointHash> object_set;
     public:
         Object(GridMap* _map){
             this->map = _map;

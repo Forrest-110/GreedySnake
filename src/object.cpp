@@ -1,5 +1,5 @@
 #include "object.hpp"
-
+#include <cstdlib>
 bool SNAKE::Object::generateObjectAtXY(int x, int y)
 {
     if (map->getCell(x, y) == CellType::EMPTY)

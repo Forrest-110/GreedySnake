@@ -18,8 +18,23 @@ class Point{
     int x;
     int y;
     CellType type;
+    bool operator==(const Point& p) const{
+        return (x==p.x && y==p.y && type==p.type);
+    }
 };
-
+struct PointHash {
+    std::size_t operator()(const Point & v) const {
+        std::hash<int> hasher;
+        std::size_t seed = 0;
+        int i=v.x;
+        seed ^= hasher(i) + 0x9e3779b9 + (seed<<6) + (seed>>2);
+        i=v.y;
+        seed ^= hasher(i) + 0x9e3779b9 + (seed<<6) + (seed>>2);
+        i=int(v.type);
+        seed ^= hasher(i) + 0x9e3779b9 + (seed<<6) + (seed>>2);
+        return seed;
+    }
+};
 class BaseMap{
 private:
     int size;

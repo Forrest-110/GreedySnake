@@ -7,10 +7,11 @@ namespace SNAKE{
 
 
 
+
 class Food{
     private:
         GridMap* map;
-        std::unordered_set<Point> food_set;
+        std::unordered_set<Point,PointHash> food_set;
     public:
         Food(GridMap* _map){
             this->map = _map;
