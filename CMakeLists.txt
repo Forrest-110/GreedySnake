@@ -10,6 +10,7 @@ add_library(${PROJECT_NAME} SHARED
         src/snake.cpp
         src/object.cpp
         src/visualize.cpp
+        src/solver.cpp
 )
 add_executable(snake run.cpp)
 add_executable(test_snake test.cpp)

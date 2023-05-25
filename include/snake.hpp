@@ -7,12 +7,7 @@
 #include <cstdlib>
 namespace SNAKE
 {
-    enum class Direction{
-        UP,
-        DOWN,
-        LEFT,
-        RIGHT
-    };
+    
 
     Direction GetRandomDirection(){
         int r = rand() % 4;

@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <queue>
+#include <unordered_set>
 namespace SNAKE{
 
 enum class CellType{
@@ -11,6 +12,13 @@ enum class CellType{
         FOOD,
         WALL,
         OCCUPIED,
+    };
+    enum class Direction{
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT,
+        NONE,
     };
 
 class Point{
@@ -53,12 +61,20 @@ class GridMap: public BaseMap{
         std::queue<std::pair<Point,CellType>> update_queue;
     public:
         GridMap():BaseMap(),size(0),grid_size(0){;};
+        
         GridMap(int size, double grid_size):BaseMap(size),size(size),grid_size(grid_size){
             map.resize(size);
             for(int i=0;i<size;i++){
                 map[i].resize(size);
             }
         };
+        GridMap(int size,double grid_size,std::unordered_set<Point> obstacles){
+            GridMap(size,grid_size);
+            init();
+            for (auto &it : obstacles){
+                setCell(it.x,it.y,CellType::OBSTACLE);
+            }
+        }
         void init();
         void update();
         void reset(){
