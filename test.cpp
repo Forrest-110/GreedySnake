@@ -1,4 +1,5 @@
 #include "map.hpp"
+#include <conio.h>
 using namespace SNAKE;
 int main(){
     GridMap map(10,0.1);
