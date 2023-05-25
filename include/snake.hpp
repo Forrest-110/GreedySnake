@@ -221,8 +221,9 @@ namespace SNAKE
             int velocity;
             Direction direction;
             Direction lastdirection;
-            bool isDead;
+            
         public:
+            bool isDead;
             Snake(GridMap* _map,Food* _food,int x,int y,Direction direction,int velocity,int length = 1):
             head(_map,_food,x,y,direction,velocity),map(_map),food(_food){
                 this->length = length;
@@ -275,6 +276,25 @@ namespace SNAKE
             void setBody(std::vector<SnakeBlock> body){
                 this->body = body;
             }
+            void changeDirection(Direction direction){
+                if (direction == Direction::UP && this->lastdirection != Direction::DOWN){
+                    this->lastdirection = this->direction;
+                    this->direction = direction;
+                }
+                if (direction == Direction::DOWN && this->lastdirection != Direction::UP){
+                    this->lastdirection = this->direction;
+                    this->direction = direction;
+                }
+                if (direction == Direction::LEFT && this->lastdirection != Direction::RIGHT){
+                    this->lastdirection = this->direction;
+                    this->direction = direction;
+                }
+                if (direction == Direction::RIGHT && this->lastdirection != Direction::LEFT){
+                    this->lastdirection = this->direction;
+                    this->direction = direction;
+                }
+            }
+            
             bool move();
             bool move(Direction direction);
 
