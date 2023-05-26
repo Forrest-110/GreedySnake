@@ -66,6 +66,7 @@ CMAKE_BINARY_DIR = /home/zyf/Homework/GreedySnake/build
 all: CMakeFiles/GreedySnake.dir/all
 all: CMakeFiles/snake.dir/all
 all: CMakeFiles/test_snake.dir/all
+all: CMakeFiles/test_solver.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,6 +77,7 @@ preinstall:
 clean: CMakeFiles/GreedySnake.dir/clean
 clean: CMakeFiles/snake.dir/clean
 clean: CMakeFiles/test_snake.dir/clean
+clean: CMakeFiles/test_solver.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -85,12 +87,12 @@ clean: CMakeFiles/test_snake.dir/clean
 CMakeFiles/GreedySnake.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreedySnake.dir/build.make CMakeFiles/GreedySnake.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreedySnake.dir/build.make CMakeFiles/GreedySnake.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target GreedySnake"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target GreedySnake"
 .PHONY : CMakeFiles/GreedySnake.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GreedySnake.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GreedySnake.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake/build/CMakeFiles 0
 .PHONY : CMakeFiles/GreedySnake.dir/rule
@@ -111,12 +113,12 @@ CMakeFiles/GreedySnake.dir/clean:
 CMakeFiles/snake.dir/all: CMakeFiles/GreedySnake.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake.dir/build.make CMakeFiles/snake.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=8,9 "Built target snake"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=9,10 "Built target snake"
 .PHONY : CMakeFiles/snake.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/snake.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/snake.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake/build/CMakeFiles 0
 .PHONY : CMakeFiles/snake.dir/rule
@@ -137,12 +139,12 @@ CMakeFiles/snake.dir/clean:
 CMakeFiles/test_snake.dir/all: CMakeFiles/GreedySnake.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_snake.dir/build.make CMakeFiles/test_snake.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_snake.dir/build.make CMakeFiles/test_snake.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=10,11 "Built target test_snake"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=11,12 "Built target test_snake"
 .PHONY : CMakeFiles/test_snake.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_snake.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_snake.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_snake.dir/rule
@@ -155,6 +157,32 @@ test_snake: CMakeFiles/test_snake.dir/rule
 CMakeFiles/test_snake.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_snake.dir/build.make CMakeFiles/test_snake.dir/clean
 .PHONY : CMakeFiles/test_snake.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_solver.dir
+
+# All Build rule for target.
+CMakeFiles/test_solver.dir/all: CMakeFiles/GreedySnake.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_solver.dir/build.make CMakeFiles/test_solver.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_solver.dir/build.make CMakeFiles/test_solver.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=13,14 "Built target test_solver"
+.PHONY : CMakeFiles/test_solver.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_solver.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_solver.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_solver.dir/rule
+
+# Convenience name for target.
+test_solver: CMakeFiles/test_solver.dir/rule
+.PHONY : test_solver
+
+# clean rule for target.
+CMakeFiles/test_solver.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_solver.dir/build.make CMakeFiles/test_solver.dir/clean
+.PHONY : CMakeFiles/test_solver.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/zyf/Homework/GreedySnake/src/map.cpp" "CMakeFiles/GreedySnake.dir/src/map.cpp.o" "gcc" "CMakeFiles/GreedySnake.dir/src/map.cpp.o.d"
   "/home/zyf/Homework/GreedySnake/src/object.cpp" "CMakeFiles/GreedySnake.dir/src/object.cpp.o" "gcc" "CMakeFiles/GreedySnake.dir/src/object.cpp.o.d"
   "/home/zyf/Homework/GreedySnake/src/snake.cpp" "CMakeFiles/GreedySnake.dir/src/snake.cpp.o" "gcc" "CMakeFiles/GreedySnake.dir/src/snake.cpp.o.d"
+  "/home/zyf/Homework/GreedySnake/src/solver.cpp" "CMakeFiles/GreedySnake.dir/src/solver.cpp.o" "gcc" "CMakeFiles/GreedySnake.dir/src/solver.cpp.o.d"
   "/home/zyf/Homework/GreedySnake/src/visualize.cpp" "CMakeFiles/GreedySnake.dir/src/visualize.cpp.o" "gcc" "CMakeFiles/GreedySnake.dir/src/visualize.cpp.o.d"
   )
 

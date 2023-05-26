@@ -1,5 +1,27 @@
 #include "snake.hpp"
 #include <iostream>
+SNAKE::Direction SNAKE::GetRandomDirection()
+{
+        int r = rand() % 4;
+        switch (r)
+        {
+        case 0:
+            return Direction::UP;
+            break;
+        case 1:
+            return Direction::DOWN;
+            break;
+        case 2:
+            return Direction::LEFT;
+            break;
+        case 3:
+            return Direction::RIGHT;
+            break;
+        default:
+            return Direction::UP;
+            break;
+        }
+    }
 bool SNAKE::Snake::move(SNAKE::Direction direction){
     this->head.move(direction);
     if (this->body.size()!=0)
@@ -8,8 +30,9 @@ bool SNAKE::Snake::move(SNAKE::Direction direction){
         this->body[i].move(this->body[i - 1].getLastDirection());
     }
     if (this->head.eatFood()){
-
-        
+        this->score++;
+        this->map->score++;
+        while(!(this->food->generateFoodRandomly()));
         SNAKE::Direction dir_toinsert;
         
         int x_toinsert;
@@ -66,7 +89,8 @@ bool SNAKE::Snake::move(SNAKE::Direction direction){
         this->length++;
     }
     if (this->head.isDead()){
-        this->isDead = true;
+        std::cout<<"Snake is dead"<<std::endl;
+        this->_isDead = true;
         return false;
     }
     return true;

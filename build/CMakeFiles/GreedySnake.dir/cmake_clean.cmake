@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GreedySnake.dir/src/object.cpp.o.d"
   "CMakeFiles/GreedySnake.dir/src/snake.cpp.o"
   "CMakeFiles/GreedySnake.dir/src/snake.cpp.o.d"
+  "CMakeFiles/GreedySnake.dir/src/solver.cpp.o"
+  "CMakeFiles/GreedySnake.dir/src/solver.cpp.o.d"
   "CMakeFiles/GreedySnake.dir/src/visualize.cpp.o"
   "CMakeFiles/GreedySnake.dir/src/visualize.cpp.o.d"
   "libGreedySnake.pdb"

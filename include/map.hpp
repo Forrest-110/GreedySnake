@@ -1,9 +1,11 @@
+#pragma once
 #ifndef _MAP_HPP_
 #define _MAP_HPP_
 
 #include <vector>
 #include <queue>
 #include <unordered_set>
+#include <iostream>
 namespace SNAKE{
 
 enum class CellType{
@@ -29,6 +31,9 @@ class Point{
     bool operator==(const Point& p) const{
         return (x==p.x && y==p.y && type==p.type);
     }
+    Point():x(0),y(0),type(CellType::EMPTY){};
+    Point(int x, int y, CellType type):x(x),y(y),type(type){};
+    Point(int x,int y):x(x),y(y),type(CellType::EMPTY){};
 };
 struct PointHash {
     std::size_t operator()(const Point & v) const {
@@ -60,23 +65,31 @@ class GridMap: public BaseMap{
         double grid_size;
         std::queue<std::pair<Point,CellType>> update_queue;
     public:
-        GridMap():BaseMap(),size(0),grid_size(0){;};
+    int score;
+        GridMap():BaseMap(),size(0),grid_size(0),score(0){;};
         
-        GridMap(int size, double grid_size):BaseMap(size),size(size),grid_size(grid_size){
+        GridMap(int size, double grid_size):BaseMap(size),size(size),grid_size(grid_size),score(0){
             map.resize(size);
             for(int i=0;i<size;i++){
                 map[i].resize(size);
             }
         };
-        GridMap(int size,double grid_size,std::unordered_set<Point> obstacles){
-            GridMap(size,grid_size);
-            init();
+        void init();
+        void update();
+        GridMap(int size,double grid_size,std::unordered_set<Point,PointHash> obstacles):GridMap(size,grid_size){
+            
+            
+            this->init();
+            
             for (auto &it : obstacles){
                 setCell(it.x,it.y,CellType::OBSTACLE);
             }
+            
+            this->update();
+            
         }
-        void init();
-        void update();
+        
+        
         void reset(){
             init();
         };

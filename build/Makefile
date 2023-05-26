@@ -155,6 +155,19 @@ test_snake/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_snake.dir/build.make CMakeFiles/test_snake.dir/build
 .PHONY : test_snake/fast
 
+#=============================================================================
+# Target rules for targets named test_solver
+
+# Build rule for target.
+test_solver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_solver
+.PHONY : test_solver
+
+# fast build rule for target.
+test_solver/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_solver.dir/build.make CMakeFiles/test_solver.dir/build
+.PHONY : test_solver/fast
+
 run.o: run.cpp.o
 .PHONY : run.o
 
@@ -299,6 +312,30 @@ src/snake.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreedySnake.dir/build.make CMakeFiles/GreedySnake.dir/src/snake.cpp.s
 .PHONY : src/snake.cpp.s
 
+src/solver.o: src/solver.cpp.o
+.PHONY : src/solver.o
+
+# target to build an object file
+src/solver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreedySnake.dir/build.make CMakeFiles/GreedySnake.dir/src/solver.cpp.o
+.PHONY : src/solver.cpp.o
+
+src/solver.i: src/solver.cpp.i
+.PHONY : src/solver.i
+
+# target to preprocess a source file
+src/solver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreedySnake.dir/build.make CMakeFiles/GreedySnake.dir/src/solver.cpp.i
+.PHONY : src/solver.cpp.i
+
+src/solver.s: src/solver.cpp.s
+.PHONY : src/solver.s
+
+# target to generate assembly for a file
+src/solver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreedySnake.dir/build.make CMakeFiles/GreedySnake.dir/src/solver.cpp.s
+.PHONY : src/solver.cpp.s
+
 src/visualize.o: src/visualize.cpp.o
 .PHONY : src/visualize.o
 
@@ -347,6 +384,30 @@ test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_snake.dir/build.make CMakeFiles/test_snake.dir/test.cpp.s
 .PHONY : test.cpp.s
 
+test_solver.o: test_solver.cpp.o
+.PHONY : test_solver.o
+
+# target to build an object file
+test_solver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_solver.dir/build.make CMakeFiles/test_solver.dir/test_solver.cpp.o
+.PHONY : test_solver.cpp.o
+
+test_solver.i: test_solver.cpp.i
+.PHONY : test_solver.i
+
+# target to preprocess a source file
+test_solver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_solver.dir/build.make CMakeFiles/test_solver.dir/test_solver.cpp.i
+.PHONY : test_solver.cpp.i
+
+test_solver.s: test_solver.cpp.s
+.PHONY : test_solver.s
+
+# target to generate assembly for a file
+test_solver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_solver.dir/build.make CMakeFiles/test_solver.dir/test_solver.cpp.s
+.PHONY : test_solver.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -358,6 +419,7 @@ help:
 	@echo "... GreedySnake"
 	@echo "... snake"
 	@echo "... test_snake"
+	@echo "... test_solver"
 	@echo "... run.o"
 	@echo "... run.i"
 	@echo "... run.s"
@@ -376,12 +438,18 @@ help:
 	@echo "... src/snake.o"
 	@echo "... src/snake.i"
 	@echo "... src/snake.s"
+	@echo "... src/solver.o"
+	@echo "... src/solver.i"
+	@echo "... src/solver.s"
 	@echo "... src/visualize.o"
 	@echo "... src/visualize.i"
 	@echo "... src/visualize.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
+	@echo "... test_solver.o"
+	@echo "... test_solver.i"
+	@echo "... test_solver.s"
 .PHONY : help
 
 

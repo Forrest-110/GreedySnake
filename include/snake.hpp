@@ -1,3 +1,4 @@
+#pragma once
 #ifndef _SNAKE_HPP_
 #define _SNAKE_HPP_
 
@@ -9,27 +10,7 @@ namespace SNAKE
 {
     
 
-    Direction GetRandomDirection(){
-        int r = rand() % 4;
-        switch (r)
-        {
-        case 0:
-            return Direction::UP;
-            break;
-        case 1:
-            return Direction::DOWN;
-            break;
-        case 2:
-            return Direction::LEFT;
-            break;
-        case 3:
-            return Direction::RIGHT;
-            break;
-        default:
-            return Direction::UP;
-            break;
-        }
-    }
+    Direction GetRandomDirection();
 
 
 
@@ -217,16 +198,21 @@ namespace SNAKE
             std::vector<SnakeBlock> body;//body excludes head
             int length;
             int velocity;
+            int score;
             
         public:
-            bool isDead;
+            bool _isDead;
             Snake(GridMap* _map,Food* _food,int x,int y,Direction direction,int velocity,int length = 1):
             head(_map,_food,x,y,direction,velocity),map(_map),food(_food){
                 this->length = length;
                 this->body.reserve(length-1);
                 this->velocity = velocity;
-                this->isDead = false;
+                this->_isDead = false;
                 this->map->setCell(x,y,CellType::OCCUPIED);
+                this->score = 0;
+            }
+            int getScore(){
+                return this->score;
             }
             int getLength(){
                 return this->length;
@@ -241,7 +227,7 @@ namespace SNAKE
                 return this->head.getLastDirection();
             }
             bool getIsDead(){
-                return this->isDead;
+                return this->_isDead;
             }
             SnakeHead getHead(){
                 return this->head;
@@ -261,7 +247,7 @@ namespace SNAKE
                 this->head.direction = direction;
             }
             void setIsDead(bool isDead){
-                this->isDead = isDead;
+                this->_isDead = isDead;
             }
             void setHead(SnakeHead head){
                 this->head = head;
