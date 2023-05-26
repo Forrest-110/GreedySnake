@@ -3,7 +3,7 @@
 #define _GAME_HPP_
 #include <vector>
 #include "map.hpp"
-#include "solver.hpp"
+#include "greedy.hpp"
 #include "snake.hpp"
 #include "food.hpp"
 #include "object.hpp"
@@ -45,10 +45,10 @@ class Human: public BasePlayer{
 
 class Ai: public BasePlayer{
     private:
-    BaseSolver *solver;
+    SOLVER::GreedySolver *greedy_solver;
     public:
-    Ai(BaseSolver *solver):BasePlayer(PlayerType::AI){
-        this->solver = solver;
+    Ai(SOLVER::GreedySolver *gsolver=nullptr):BasePlayer(PlayerType::AI){
+        this->greedy_solver = gsolver;
     };
     ~Ai(){};
     Direction getNextDirection();

@@ -5,6 +5,7 @@
 #include "map.hpp"
 #include "food.hpp"
 #include <vector>
+#include <deque>
 #include <cstdlib>
 namespace SNAKE
 {
@@ -48,6 +49,9 @@ namespace SNAKE
             int getY(){
                 return this->y;
             };
+            Point getPoint(){
+                return Point(this->x,this->y);
+            }
             Direction getDirection(){
                 return this->direction;
             };
@@ -232,8 +236,17 @@ namespace SNAKE
             SnakeHead getHead(){
                 return this->head;
             }
+            Point getHeadPoint(){
+                return this->head.getPoint();
+            }
             std::vector<SnakeBlock> getBody(){
                 return this->body;
+            }
+            Point getTail(){
+                if (this->body.size() == 0){
+                    return this->head.getPoint();
+                }
+                return this->body.back().getPoint();
             }
             void setLength(int length){
                 this->length = length;
@@ -276,6 +289,17 @@ namespace SNAKE
             
             bool move();
             bool move(Direction direction);
+            bool move_along_path(std::deque<Direction> path){
+                if (path.size() == 0){
+                    return false;
+                }
+                for (auto direction:path){
+                    if (this->move(direction) == false){
+                        return false;
+                    }
+                }
+                return true;
+            }
 
     };
 

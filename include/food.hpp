@@ -12,6 +12,7 @@ namespace SNAKE{
 class Food{
     private:
         GridMap* map;
+        public:
         std::unordered_set<Point,PointHash> food_set;
     public:
         Food(GridMap* _map){

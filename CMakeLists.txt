@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.15)
 project(GreedySnake)
 include_directories(
         include
+        include/solver
 )
 add_library(${PROJECT_NAME} SHARED
         src/food.cpp
@@ -10,7 +11,9 @@ add_library(${PROJECT_NAME} SHARED
         src/snake.cpp
         src/object.cpp
         src/visualize.cpp
-        src/solver.cpp
+        src/solver/base.cpp
+        src/solver/path.cpp
+        src/solver/greedy.cpp
 )
 add_executable(snake run.cpp)
 add_executable(test_snake test.cpp)

@@ -30,7 +30,10 @@ SNAKE::Direction SNAKE::Human::getNextDirection(){
 }
 
 SNAKE::Direction SNAKE::Ai::getNextDirection(){
-    //TODO: implement this function
+    if (greedy_solver!=nullptr){
+        return greedy_solver->next_Direction();
+    }
+
     return SNAKE::Direction::NONE;
 }
 

@@ -1,5 +1,23 @@
 #include "map.hpp"
 #include <iostream>
+
+SNAKE::Direction SNAKE::opposite(SNAKE::Direction d){
+    switch(d){
+        case Direction::UP:
+            return Direction::DOWN;
+        case Direction::DOWN:
+            return Direction::UP;
+        case Direction::LEFT:
+            return Direction::RIGHT;
+        case Direction::RIGHT:
+            return Direction::LEFT;
+        default:
+            return Direction::NONE;
+    }
+}
+
+
+
 void SNAKE::GridMap::init(){
     this->score = 0;
     for(int i=0;i<size;i++){

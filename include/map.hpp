@@ -22,6 +22,7 @@ enum class CellType{
         RIGHT,
         NONE,
     };
+    Direction opposite(Direction d);
 
 class Point{
     public:
@@ -98,6 +99,26 @@ class GridMap: public BaseMap{
         int getSize();
         double getGridSize();
         void showMap() const;
+        bool is_valid(int x, int y){
+            if (x < 0 || x>= size|| y < 0 || y >= size) {
+            return false;
+        }
+        bool ret=((this->getCell(x,y) !=CellType::EMPTY) && (this->getCell(x,y) !=CellType::FOOD));
+        
+        return !ret;
+        }
+        bool isfull(){
+            for (int i=0;i<size;i++){
+                for (int j=0;j<size;j++){
+                    if (this->getCell(i,j)==CellType::EMPTY || this->getCell(i,j)==CellType::FOOD){
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+
 };
 
 }
