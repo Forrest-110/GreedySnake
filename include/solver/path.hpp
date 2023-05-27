@@ -3,6 +3,7 @@
 
 #include "base.hpp"
 #include <deque>
+#include <climits>
 namespace SOLVER{
 
 class _TableCell{
@@ -27,22 +28,34 @@ class PathSolver:public BaseSolver{
     public:
     std::vector<std::vector<_TableCell>> table;
     public:
-    PathSolver():BaseSolver(nullptr,nullptr,nullptr){};
-    PathSolver(SNAKE::GridMap *game,SNAKE::Snake *snake,SNAKE::Food *f):BaseSolver(map,snake,f){
+    PathSolver():BaseSolver(nullptr){};
+    PathSolver(SNAKE::Snake *snake):BaseSolver(snake){
         SNAKE::GridMap *map=getMap();
+        
+        if(!map){
+            
+            throw std::runtime_error("map is nullptr");
+        }
+        
+        
+        
         table.resize(map->getSize());
         for(int i=0;i<map->getSize();i++){
             table[i].resize(map->getSize());
             for(int j=0;j<map->getSize();j++){
+                
                 table[i][j].reset();
             }
         }
-        delete map;
+        
+        
     }
 
-    ~PathSolver(){
-        table.clear();
-    };
+    std::vector<std::vector<_TableCell>> getTable(){
+        return table;
+    }
+
+
 
     std::deque<SNAKE::Direction> shortest_path_to(Pos des);
     std::deque<SNAKE::Direction> longest_path_to(Pos des);
@@ -74,7 +87,7 @@ class PathSolver:public BaseSolver{
     }
 
     SNAKE::Direction next_Direction(){
-        ;
+        return SNAKE::Direction::NONE;
     }
 
 

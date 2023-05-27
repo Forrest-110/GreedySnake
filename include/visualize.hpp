@@ -18,17 +18,20 @@ class VisualizeThread{
             this->game = _game;
             this->interval = _interval;
             this->running = false;
+            this->thread=nullptr;
         }
         void start(){
+            
             this->running = true;
-            this->thread = new std::thread(&VisualizeThread::run,this);
+            this->thread =new std::thread(&VisualizeThread::run,this);
             this->thread->detach();
         }
         void stop(){
+            
             this->running = false;
             if (this->game->isOver){
                 this->game->map->update();
-                std::system("clear");
+                // std::system("clear");
                 for (auto player : this->game->players)
                 {
                     std::cout << "Score: " << player->snake->getScore() << std::endl;

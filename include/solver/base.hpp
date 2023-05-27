@@ -1,6 +1,9 @@
 #ifndef _BASE_HPP_
 #define _BASE_HPP_
-#include"game.hpp"
+#include "map.hpp"
+#include "snake.hpp"
+#include "food.hpp"
+#include <iostream>
 namespace SOLVER{
 
     class Pos: public SNAKE::Point{
@@ -49,19 +52,19 @@ namespace SOLVER{
 
     class BaseSolver{
         public:
-        SNAKE::GridMap* map;
+        // SNAKE::GridMap* map;
         SNAKE::Snake *snake;
-        SNAKE::Food *food;
+        // SNAKE::Food *food;
         public:
-        BaseSolver(SNAKE::GridMap* m,SNAKE::Snake* snake,SNAKE::Food *f):map(m),snake(snake),food(f){};
-        ~BaseSolver(){
-            delete map;
-            delete food;
-            delete snake;
-        };
-        SNAKE::Food* getFood(){return food;};
+        BaseSolver(SNAKE::Snake* snake):snake(snake){};
+        // ~BaseSolver(){
+        //     delete map;
+        //     delete food;
+        //     delete snake;
+        // };
+        SNAKE::Food* getFood(){return snake->food;};
         SNAKE::Snake* getSnake(){return snake;};
-        SNAKE::GridMap* getMap(){return map;};
+        SNAKE::GridMap* getMap(){return snake->map;};
         virtual SNAKE::Direction next_Direction()=0;
     };
 

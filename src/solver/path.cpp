@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <random>
 #include <ctime>
+
 std::deque<SNAKE::Direction> SOLVER::PathSolver::shortest_path_to(Pos des)
 {
     this->reset_table();
@@ -33,13 +34,19 @@ std::deque<SNAKE::Direction> SOLVER::PathSolver::shortest_path_to(Pos des)
             if (first_dir == cur.direction_to(adjs[i]))
             {
                 std::swap(adjs[i], adjs[0]);
+                break;
             }
-            for (auto adj : adjs)
+        }
+        for (auto adj : adjs)
+        {
+            if (is_valid(adj))
             {
+                
                 auto adj_cell = &table[adj.x][adj.y];
                 if (adj_cell->dist == INT_MAX)
                 {
                     adj_cell->dist = table[cur.x][cur.y].dist + 1;
+
                     adj_cell->parent = cur;
                     queue.push_back(adj);
                 }
@@ -110,7 +117,7 @@ std::deque<SNAKE::Direction> SOLVER::PathSolver::longest_path_to(Pos des)
 
 std::deque<SNAKE::Direction> SOLVER::PathSolver::longest_path_to_tail(){
     auto tail=getSnake()->getTail();
-    return longest_path_to(Pos(tail));
+    return path_to(tail,true);
 }
 
 std::deque<SNAKE::Direction> SOLVER::PathSolver::shortest_path_to_food(){
@@ -120,7 +127,7 @@ std::deque<SNAKE::Direction> SOLVER::PathSolver::shortest_path_to_food(){
     std::deque<SNAKE::Direction> ret;
     std::deque<SNAKE::Direction> final_ret;
     for (auto food:food_set){
-        ret=shortest_path_to(Pos(food));
+        ret=path_to(food,false);
         tmp=ret.size();
         if (tmp<minlen){
             minlen=tmp;
@@ -130,15 +137,18 @@ std::deque<SNAKE::Direction> SOLVER::PathSolver::shortest_path_to_food(){
     return final_ret;
 }
 
-std::deque<SNAKE::Direction> SOLVER::PathSolver::path_to(Pos des, bool longest=false){
+std::deque<SNAKE::Direction> SOLVER::PathSolver::path_to(Pos des, bool longest){
     SNAKE::CellType orig_type=getMap()->getCell(des.x,des.y);
-    getMap()->setCell(des.x,des.y,SNAKE::CellType::EMPTY);
+    getMap()->setCellwoUpdate(des.x,des.y,SNAKE::CellType::EMPTY);
+    // std::cout<<"type: "<<(int)orig_type<<std::endl;
+    // std::cout<<"new type: "<<(int)getMap()->getCell(des.x,des.y)<<std::endl;
     std::deque<SNAKE::Direction> ret;
     if (longest){
         ret=longest_path_to(des);
     }else{
         ret=shortest_path_to(des);
     }
-    getMap()->setCell(des.x,des.y,orig_type);
+    getMap()->setCellwoUpdate(des.x,des.y,orig_type);
+    
     return ret;
 }

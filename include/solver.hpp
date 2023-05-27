@@ -23,9 +23,9 @@ class BaseSolver{
         this->start = start;
         this->goal = goal;
     }
-    ~BaseSolver(){
-        delete map;
-    }
+    // ~BaseSolver(){
+    //     delete map;
+    // }
     // virtual void solve() = 0;
     std::vector<Point> getPath();
 

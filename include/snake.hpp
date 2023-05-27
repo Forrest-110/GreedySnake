@@ -75,7 +75,15 @@ namespace SNAKE
                 this->y = y;
                 this->map->setCell(x,y,CellType::OCCUPIED);
             };
-            
+            void setMap(GridMap *m){
+                this->map=m;
+            }
+            void setFood(Food *f){
+                this->food=f;
+            }
+            void setFoodMap(GridMap *m){
+                food->setMap(m);
+            }
             void setDirection(Direction direction){
                 this->lastdirection = this->direction;
                 this->direction = direction;
@@ -196,15 +204,16 @@ namespace SNAKE
 
     class Snake{
         private:
-            GridMap* map;
-            Food* food;
-            SnakeHead head;
+            
             std::vector<SnakeBlock> body;//body excludes head
             int length;
             int velocity;
             int score;
             
         public:
+        GridMap* map;
+            Food* food;
+            SnakeHead head;
             bool _isDead;
             Snake(GridMap* _map,Food* _food,int x,int y,Direction direction,int velocity,int length = 1):
             head(_map,_food,x,y,direction,velocity),map(_map),food(_food){
@@ -214,6 +223,43 @@ namespace SNAKE
                 this->_isDead = false;
                 this->map->setCell(x,y,CellType::OCCUPIED);
                 this->score = 0;
+            }
+
+            Snake(GridMap* _map,Food* _food,Direction direction,int velocity,std::vector<Point> points):
+            head(_map,_food,points[0].x,points[0].y,direction,velocity),map(_map),food(_food){
+                this->length = points.size();
+                this->body.reserve(length-1);
+                this->velocity = velocity;
+                this->_isDead = false;
+                this->map->setCellwoUpdate(points[0].x,points[0].y,CellType::OCCUPIED);
+                this->score = 0;
+                for (int i=1;i<points.size();i++){
+                    this->body.push_back(SnakeBlock(_map,_food,points[i].x,points[i].y,direction,velocity));
+                    this->map->setCellwoUpdate(points[i].x,points[i].y,CellType::OCCUPIED);
+                }
+            }
+
+
+            void setMap(GridMap *m){
+                this->map=m;
+                head.setMap(m);
+                for (auto b:body){
+                    b.setMap(m);
+                }
+            }
+            void setFood(Food *f){
+                this->food=f;
+                head.setFood(f);
+                for (auto b:body){
+                    b.setFood(f);
+                }
+            }
+            void setFoodMap(GridMap *m){
+                this->food->setMap(m);
+                head.setFoodMap(m);
+                for (auto b:body){
+                    b.setFoodMap(m);
+                }
             }
             int getScore(){
                 return this->score;
@@ -268,6 +314,26 @@ namespace SNAKE
             void setBody(std::vector<SnakeBlock> body){
                 this->body = body;
             }
+
+            std::vector<Point> getPoints(){
+                std::vector<Point> points;
+                points.push_back(this->head.getPoint());
+                for (auto b:this->body){
+                    points.push_back(b.getPoint());
+                }
+                return points;
+            }
+
+            Snake *getCopy(){
+                GridMap *map_copy=new GridMap(*this->map);
+                Food *food_copy=new Food(*this->food);
+                food_copy->setMap(map_copy);
+                Snake *snake_copy=new Snake(map_copy,food_copy,this->getDirection(),this->getVelocity(),this->getPoints());
+                snake_copy->score=this->getScore();
+                snake_copy->_isDead=this->_isDead;
+                return snake_copy;
+            }
+
             Direction changeDirection(Direction direction){
                 if (direction == Direction::UP && this->head.lastdirection != Direction::DOWN){
                     return direction;
@@ -289,6 +355,7 @@ namespace SNAKE
             
             bool move();
             bool move(Direction direction);
+            
             bool move_along_path(std::deque<Direction> path){
                 if (path.size() == 0){
                     return false;

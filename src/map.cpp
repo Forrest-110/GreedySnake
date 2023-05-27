@@ -49,10 +49,17 @@ void SNAKE::GridMap::setCell(int x, int y, CellType type){
 }
 
 SNAKE::CellType SNAKE::GridMap::getCell(int x, int y){
-    return map[x][y];
+    if (!(x < 0 || x >= size || y < 0 || y >= size))
+        return map[x][y];
+    else{
+        std::cout<<x<<","<<y<<" out of range"<<std::endl;
+        // exit(0);
+        return CellType::OBSTACLE;
+    }
 }
 
 int SNAKE::GridMap::getSize(){
+    
     return size;
 }
 

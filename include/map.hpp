@@ -50,7 +50,7 @@ struct PointHash {
     }
 };
 class BaseMap{
-private:
+public:
     int size;
 public:
     BaseMap():size(0){};
@@ -62,14 +62,14 @@ public:
 class GridMap: public BaseMap{
     private:
         std::vector<std::vector<CellType>> map;
-        int size;
+        
         double grid_size;
         std::queue<std::pair<Point,CellType>> update_queue;
     public:
     int score;
-        GridMap():BaseMap(),size(0),grid_size(0),score(0){;};
+        GridMap():BaseMap(),grid_size(0),score(0){;};
         
-        GridMap(int size, double grid_size):BaseMap(size),size(size),grid_size(grid_size),score(0){
+        GridMap(int size, double grid_size):BaseMap(size),grid_size(grid_size),score(0){
             map.resize(size);
             for(int i=0;i<size;i++){
                 map[i].resize(size);
@@ -95,17 +95,31 @@ class GridMap: public BaseMap{
             init();
         };
         void setCell(int x, int y, CellType type);
+        void setCellwoUpdate(int x, int y, CellType type){
+            if (is_inrange(x,y))
+            map[x][y]=type;
+            
+        }
         CellType getCell(int x, int y);
         int getSize();
         double getGridSize();
         void showMap() const;
-        bool is_valid(int x, int y){
-            if (x < 0 || x>= size|| y < 0 || y >= size) {
-            return false;
+        bool is_inrange(int x, int y){
+            if (x < 0 || x >= size || y < 0 || y >= size)
+            {
+                return false;
+            }
+            return true;
         }
-        bool ret=((this->getCell(x,y) !=CellType::EMPTY) && (this->getCell(x,y) !=CellType::FOOD));
-        
-        return !ret;
+        bool is_valid(int x, int y)
+        {
+            if (x < 0 || x >= size || y < 0 || y >= size)
+            {
+                return false;
+            }
+            bool ret = ((this->getCell(x, y) != CellType::EMPTY) && (this->getCell(x, y) != CellType::FOOD));
+
+            return !ret;
         }
         bool isfull(){
             for (int i=0;i<size;i++){

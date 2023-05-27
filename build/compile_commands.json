@@ -1,0 +1,80 @@
+[
+{
+  "directory": "/home/zyf/Homework/GreedySnake/build",
+  "command": "/usr/bin/c++ -DGreedySnake_EXPORTS -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver -g -fPIC -o CMakeFiles/GreedySnake.dir/src/food.cpp.o -c /home/zyf/Homework/GreedySnake/src/food.cpp",
+  "file": "/home/zyf/Homework/GreedySnake/src/food.cpp",
+  "output": "CMakeFiles/GreedySnake.dir/src/food.cpp.o"
+},
+{
+  "directory": "/home/zyf/Homework/GreedySnake/build",
+  "command": "/usr/bin/c++ -DGreedySnake_EXPORTS -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver -g -fPIC -o CMakeFiles/GreedySnake.dir/src/game.cpp.o -c /home/zyf/Homework/GreedySnake/src/game.cpp",
+  "file": "/home/zyf/Homework/GreedySnake/src/game.cpp",
+  "output": "CMakeFiles/GreedySnake.dir/src/game.cpp.o"
+},
+{
+  "directory": "/home/zyf/Homework/GreedySnake/build",
+  "command": "/usr/bin/c++ -DGreedySnake_EXPORTS -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver -g -fPIC -o CMakeFiles/GreedySnake.dir/src/map.cpp.o -c /home/zyf/Homework/GreedySnake/src/map.cpp",
+  "file": "/home/zyf/Homework/GreedySnake/src/map.cpp",
+  "output": "CMakeFiles/GreedySnake.dir/src/map.cpp.o"
+},
+{
+  "directory": "/home/zyf/Homework/GreedySnake/build",
+  "command": "/usr/bin/c++ -DGreedySnake_EXPORTS -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver -g -fPIC -o CMakeFiles/GreedySnake.dir/src/snake.cpp.o -c /home/zyf/Homework/GreedySnake/src/snake.cpp",
+  "file": "/home/zyf/Homework/GreedySnake/src/snake.cpp",
+  "output": "CMakeFiles/GreedySnake.dir/src/snake.cpp.o"
+},
+{
+  "directory": "/home/zyf/Homework/GreedySnake/build",
+  "command": "/usr/bin/c++ -DGreedySnake_EXPORTS -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver -g -fPIC -o CMakeFiles/GreedySnake.dir/src/object.cpp.o -c /home/zyf/Homework/GreedySnake/src/object.cpp",
+  "file": "/home/zyf/Homework/GreedySnake/src/object.cpp",
+  "output": "CMakeFiles/GreedySnake.dir/src/object.cpp.o"
+},
+{
+  "directory": "/home/zyf/Homework/GreedySnake/build",
+  "command": "/usr/bin/c++ -DGreedySnake_EXPORTS -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver -g -fPIC -o CMakeFiles/GreedySnake.dir/src/visualize.cpp.o -c /home/zyf/Homework/GreedySnake/src/visualize.cpp",
+  "file": "/home/zyf/Homework/GreedySnake/src/visualize.cpp",
+  "output": "CMakeFiles/GreedySnake.dir/src/visualize.cpp.o"
+},
+{
+  "directory": "/home/zyf/Homework/GreedySnake/build",
+  "command": "/usr/bin/c++ -DGreedySnake_EXPORTS -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver -g -fPIC -o CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o -c /home/zyf/Homework/GreedySnake/src/solver/base.cpp",
+  "file": "/home/zyf/Homework/GreedySnake/src/solver/base.cpp",
+  "output": "CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o"
+},
+{
+  "directory": "/home/zyf/Homework/GreedySnake/build",
+  "command": "/usr/bin/c++ -DGreedySnake_EXPORTS -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver -g -fPIC -o CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o -c /home/zyf/Homework/GreedySnake/src/solver/path.cpp",
+  "file": "/home/zyf/Homework/GreedySnake/src/solver/path.cpp",
+  "output": "CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o"
+},
+{
+  "directory": "/home/zyf/Homework/GreedySnake/build",
+  "command": "/usr/bin/c++ -DGreedySnake_EXPORTS -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver -g -fPIC -o CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o -c /home/zyf/Homework/GreedySnake/src/solver/greedy.cpp",
+  "file": "/home/zyf/Homework/GreedySnake/src/solver/greedy.cpp",
+  "output": "CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o"
+},
+{
+  "directory": "/home/zyf/Homework/GreedySnake/build",
+  "command": "/usr/bin/c++  -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver -g -o CMakeFiles/snake.dir/run.cpp.o -c /home/zyf/Homework/GreedySnake/run.cpp",
+  "file": "/home/zyf/Homework/GreedySnake/run.cpp",
+  "output": "CMakeFiles/snake.dir/run.cpp.o"
+},
+{
+  "directory": "/home/zyf/Homework/GreedySnake/build",
+  "command": "/usr/bin/c++  -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver -g -o CMakeFiles/test_snake.dir/test.cpp.o -c /home/zyf/Homework/GreedySnake/test.cpp",
+  "file": "/home/zyf/Homework/GreedySnake/test.cpp",
+  "output": "CMakeFiles/test_snake.dir/test.cpp.o"
+},
+{
+  "directory": "/home/zyf/Homework/GreedySnake/build",
+  "command": "/usr/bin/c++  -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver -g -o CMakeFiles/test_solver.dir/test_solver.cpp.o -c /home/zyf/Homework/GreedySnake/test_solver.cpp",
+  "file": "/home/zyf/Homework/GreedySnake/test_solver.cpp",
+  "output": "CMakeFiles/test_solver.dir/test_solver.cpp.o"
+},
+{
+  "directory": "/home/zyf/Homework/GreedySnake/build",
+  "command": "/usr/bin/c++  -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver -g -o CMakeFiles/test_path.dir/test_path.cpp.o -c /home/zyf/Homework/GreedySnake/test_path.cpp",
+  "file": "/home/zyf/Homework/GreedySnake/test_path.cpp",
+  "output": "CMakeFiles/test_path.dir/test_path.cpp.o"
+}
+]

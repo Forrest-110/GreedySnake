@@ -34,7 +34,7 @@ SNAKE::Direction SNAKE::Ai::getNextDirection(){
         return greedy_solver->next_Direction();
     }
 
-    return SNAKE::Direction::NONE;
+    return SNAKE::Direction::UP;
 }
 
 void SNAKE::GameManager::start(){

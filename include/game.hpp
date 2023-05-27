@@ -22,7 +22,7 @@ class BasePlayer{
     int score;
     public:
     BasePlayer(PlayerType type):type(type){};
-    ~BasePlayer(){};
+    
     PlayerType getType(){
         return type;
     }
@@ -37,9 +37,9 @@ class Human: public BasePlayer{
         this->score = 0;
         this->snake = snake;
     };
-    ~Human(){
-        delete snake;
-    };
+    // ~Human(){
+    //     delete snake;
+    // };
     Direction getNextDirection();
 };
 
@@ -47,8 +47,9 @@ class Ai: public BasePlayer{
     private:
     SOLVER::GreedySolver *greedy_solver;
     public:
-    Ai(SOLVER::GreedySolver *gsolver=nullptr):BasePlayer(PlayerType::AI){
+    Ai(Snake *snake,SOLVER::GreedySolver *gsolver=nullptr):BasePlayer(PlayerType::AI){
         this->greedy_solver = gsolver;
+        this->snake=snake;
     };
     ~Ai(){};
     Direction getNextDirection();
@@ -77,14 +78,14 @@ class GameManager{
         this->players = players;
         this->isOver = false;
     };
-    ~GameManager(){
-        delete map;
-        delete food;
-        delete object;
-        for (auto player:players){
-            delete player;
-        }
-    };
+    // ~GameManager(){
+    //     delete map;
+    //     delete food;
+    //     delete object;
+    //     for (auto player:players){
+    //         delete player;
+    //     }
+    // };
     void start();
     void run();
     void end();

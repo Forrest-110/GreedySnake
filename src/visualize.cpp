@@ -4,10 +4,12 @@ void SNAKE::VisualizeThread::run()
 {
     while (this->running)
     {
+        
         this->game->map->update();
         std::system("clear");
         for (auto player : this->game->players)
         {
+            
             std::cout << "Score: " << player->snake->getScore() << std::endl;
         }
         this->game->map->showMap();

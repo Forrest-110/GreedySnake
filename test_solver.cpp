@@ -12,16 +12,28 @@ int main()
 {
 	
 	GridMap map(10,0.1);
+
+    
     Food food(&map);
     Object object(&map);
+    
+    
+
     Snake snake(&map,&food,5,5,Direction::UP,1);
 
-	GreedySolver greedy_solver(&map,&snake,&food);
-	Ai ai(&greedy_solver);
+    PathSolver path_solver(&snake);
+	GreedySolver greedy_solver(&snake,&path_solver);
+    
+	Ai ai(&snake,&greedy_solver);
+    Human human(&snake);
     GameManager game(&map,&food,&object,{&ai});
     VisualizeThread vis(&game,100);
+    
     vis.start();
+    
     game.start();
+    
+    // while (1);
     game.run();
     vis.stop();
 }

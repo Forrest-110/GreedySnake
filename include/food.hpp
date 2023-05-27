@@ -19,6 +19,9 @@ class Food{
             this->map = _map;
             food_set.clear();
         };
+        void setMap(GridMap* m){
+            map=m;
+        }
         bool generateFoodAtXY(int x, int y);
         bool generateFoodRandomly();
         bool generateNFoodRandomly(int n);

@@ -85,7 +85,7 @@ bool SNAKE::Snake::move(SNAKE::Direction direction){
         }
         
         this->body.push_back(*newblock);
-        delete newblock;
+        // delete newblock;
         this->length++;
     }
     if (this->head.isDead()){

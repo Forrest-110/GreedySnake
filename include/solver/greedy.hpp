@@ -7,13 +7,13 @@
 namespace SOLVER{
     class GreedySolver:public BaseSolver{
         private:
-        PathSolver _path_solver;
+        PathSolver *_path_solver;
         public:
-        GreedySolver(SNAKE::GridMap *m,SNAKE::Snake* snake,SNAKE::Food *f):BaseSolver(m,snake,f){
-            _path_solver=PathSolver(m,snake,f);
+        GreedySolver(SNAKE::Snake* snake,PathSolver *p):BaseSolver(snake){
+            
+            _path_solver=p;
         };
-        ~GreedySolver(){
-        };
+        
         SNAKE::Direction next_Direction();
 
     };

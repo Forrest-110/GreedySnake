@@ -18,6 +18,8 @@ add_library(${PROJECT_NAME} SHARED
 add_executable(snake run.cpp)
 add_executable(test_snake test.cpp)
 add_executable(test_solver test_solver.cpp)
+add_executable(test_path test_path.cpp)
 target_link_libraries(test_solver ${PROJECT_NAME})
 target_link_libraries(snake ${PROJECT_NAME})
 target_link_libraries(test_snake ${PROJECT_NAME})
+target_link_libraries(test_path ${PROJECT_NAME})
