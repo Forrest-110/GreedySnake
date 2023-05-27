@@ -7,6 +7,9 @@
 #include "snake.hpp"
 #include "food.hpp"
 #include "object.hpp"
+#include "client.hpp"
+#include "server.hpp"
+#include <string>
 namespace SNAKE{
 
 enum class PlayerType{
@@ -55,6 +58,28 @@ class Ai: public BasePlayer{
     Direction getNextDirection();
 };
 
+class ClientManager{
+    public:
+    GridMap map;
+    Food food;
+    Object object;
+    BasePlayer mainPlayer;
+    BasePlayer anotherPlayer;
+    bool isOver;
+    std::string name;
+    SOCKET::clientHandler client;
+    public:
+    ClientManager();
+    void handleMessageFromServer(string ) ;
+    void start(); 
+    void run();
+    void end();
+};
+
+enum class GameMode{
+    SinglePlayer,
+    MultiPlayer
+};
 
 class GameManager{
     public:
@@ -62,6 +87,9 @@ class GameManager{
     Food *food;
     Object *object;
     std::vector<BasePlayer *> players;
+    GameMode mode;
+    SOCKET::serverHandler server;
+    std::vector<int> clients;
     bool isOver;
     public:
     GameManager(GridMap *map,Food *food,Object *object,BasePlayer *player){
@@ -78,15 +106,9 @@ class GameManager{
         this->players = players;
         this->isOver = false;
     };
-    // ~GameManager(){
-    //     delete map;
-    //     delete food;
-    //     delete object;
-    //     for (auto player:players){
-    //         delete player;
-    //     }
-    // };
     void start();
+    void run_single_player();
+    void run_multi_player();
     void run();
     void end();
 };

@@ -68,7 +68,9 @@ class GridMap: public BaseMap{
     public:
     int score;
         GridMap():BaseMap(),grid_size(0),score(0){;};
-        
+        GridMap(int size,double grid_size,std::vector<std::vector<CellType>> map):BaseMap(size),grid_size(grid_size),score(0){
+            this->map=map;
+        };
         GridMap(int size, double grid_size):BaseMap(size),grid_size(grid_size),score(0){
             map.resize(size);
             for(int i=0;i<size;i++){

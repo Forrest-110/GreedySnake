@@ -28,7 +28,16 @@ class Food{
         bool removeFoodAtXY(int x, int y);
         bool removeFoodRandomly();
         bool removeNFoodRandomly(int n);
-
+        void setFoodSetFromMap(){
+            food_set.clear();
+            for (int i=0;i<map->getSize();i++){
+                for (int j=0;j<map->getSize();j++){
+                    if (map->getCell(i,j)==CellType::Food){
+                        food_set.insert(Point(i,j));
+                    }
+                }
+            }
+        }
 
 };
 

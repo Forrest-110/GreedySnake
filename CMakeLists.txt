@@ -14,6 +14,8 @@ add_library(${PROJECT_NAME} SHARED
         src/solver/base.cpp
         src/solver/path.cpp
         src/solver/greedy.cpp
+        src/socket/server.cpp
+        src/socket/client.cpp
 )
 add_executable(snake run.cpp)
 add_executable(test_snake test.cpp)
