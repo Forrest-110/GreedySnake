@@ -4,7 +4,7 @@ bool SNAKE::Object::generateObjectAtXY(int x, int y)
 {
     if (map->getCell(x, y) == CellType::EMPTY)
     {
-        map->setCell(x, y, CellType::OBSTACLE);
+        map->setCellwoUpdate(x, y, CellType::OBSTACLE);
         object_set.insert(Point{x, y, CellType::OBSTACLE});
         return true;
     }
@@ -33,7 +33,7 @@ bool SNAKE::Object::removeObjectAtXY(int x, int y)
 {
     if (map->getCell(x, y) == CellType::OBSTACLE)
     {
-        map->setCell(x, y, CellType::EMPTY);
+        map->setCellwoUpdate(x, y, CellType::EMPTY);
         object_set.erase(Point{x, y, CellType::OBSTACLE});
         return true;
     }

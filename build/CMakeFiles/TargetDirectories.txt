@@ -1,7 +1,7 @@
-/home/zyf/Homework/GreedySnake/build/CMakeFiles/GreedySnake.dir
-/home/zyf/Homework/GreedySnake/build/CMakeFiles/snake.dir
-/home/zyf/Homework/GreedySnake/build/CMakeFiles/test_snake.dir
-/home/zyf/Homework/GreedySnake/build/CMakeFiles/test_solver.dir
-/home/zyf/Homework/GreedySnake/build/CMakeFiles/test_path.dir
-/home/zyf/Homework/GreedySnake/build/CMakeFiles/edit_cache.dir
-/home/zyf/Homework/GreedySnake/build/CMakeFiles/rebuild_cache.dir
+/home/zyf/GreedySnake/build/CMakeFiles/GreedySnake.dir
+/home/zyf/GreedySnake/build/CMakeFiles/snake.dir
+/home/zyf/GreedySnake/build/CMakeFiles/test_snake.dir
+/home/zyf/GreedySnake/build/CMakeFiles/test_solver.dir
+/home/zyf/GreedySnake/build/CMakeFiles/test_path.dir
+/home/zyf/GreedySnake/build/CMakeFiles/edit_cache.dir
+/home/zyf/GreedySnake/build/CMakeFiles/rebuild_cache.dir

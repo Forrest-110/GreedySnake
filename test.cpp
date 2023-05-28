@@ -6,80 +6,63 @@
 #include "game.hpp"
 #include <conio.h>
 using namespace SNAKE;
+using namespace SOLVER;
 int main(){
     
     GridMap map(10,0.1);
     Food food(&map);
     Object object(&map);
-    Snake snake(&map,&food,5,5,Direction::UP,1);
-    Human human(&snake);
-    GameManager game(&map,&food,&object,{&human});
-    VisualizeThread vis(&game,100);
-    vis.start();
-    game.start();
-    game.run();
-    vis.stop();
-}
-// int main(){
-//     GridMap map(10,0.1);
-//     VisualizeThread vis(&map,100);
-//     map.init();
-//     Food food(&map);
-//     food.generateNFoodRandomly(2);
-//     Snake snake(&map,&food,5,5,Direction::UP,1);
-//     vis.start();
-//     // while (true){
-//     //     char c=getch();
-//     //     switch (c){
-//     //         case 'w':
-//     //             snake.move(Direction::UP);
-//     //             break;
-//     //         case 's':
-//     //             snake.move(Direction::DOWN);
-//     //             break;
-//     //         case 'a':
-//     //             snake.move(Direction::LEFT);
-//     //             break;
-//     //         case 'd':
-//     //             snake.move(Direction::RIGHT);
-//     //             break;
-//     //         default:
-//     //             break;
-//     //     }
-//     //     std::this_thread::sleep_for(std::chrono::milliseconds(100));
-//     // }
-//     while (true)
-//     {
-//         Direction nextdirection=snake.getDirection();
-//         if (_kbhit())
-//         {
-//             char c = getch();
-            
-//             switch (c)
-//             {
-//             case 'w':
-//                 nextdirection=snake.changeDirection(Direction::UP);
-//                 break;
-//             case 's':
-//                 nextdirection=snake.changeDirection(Direction::DOWN);
-//                 break;
-//             case 'a':
-//                 nextdirection=snake.changeDirection(Direction::LEFT);
-//                 break;
-//             case 'd':
-//                 nextdirection=snake.changeDirection(Direction::RIGHT);
-//                 break;
-//             default:
-//                 break;
-//             }
-//         }
-//         snake.move(nextdirection);
-//         if (snake.isDead)
-//         {
-//             vis.stop();
-//             break;
-//         }
-//         std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-//     }
+
+    std::cout<<"Welcome to Snake Game"<<std::endl;
+    std::cout<<"Choose Game Mode"<<std::endl;
+    std::cout<<"Single Player: 1"<<std::endl;
+    std::cout<<"Multi Player: 2"<<std::endl;
+    std::cout<<"AI: 3"<<std::endl;
+    int mode;
+    std::cin>>mode;
+
+    if (mode==1){
+        Snake snake(&map,&food,5,5,Direction::UP,1);
+        Human human(&snake);
+        GameManager game(&map,&food,&object,{&human});
+        VisualizeThread vis(&game,100);
+        vis.start();
+        game.start();
+        game.run();
+        vis.stop();
+    }else if (mode==3){
+        Snake snake(&map,&food,5,5,Direction::UP,1);
+        PathSolver path_solver(&snake);
+	    GreedySolver greedy_solver(&snake,&path_solver);
     
-// }
+	    Ai ai(&snake,&greedy_solver);
+        
+        GameManager game(&map,&food,&object,{&ai});
+        VisualizeThread vis(&game,100);
+        
+    
+        vis.start();
+    
+        game.start();
+    
+        // while (1);
+        game.run();
+        vis.stop();
+    }else{
+        Snake snake1(&map,&food,3,3,Direction::RIGHT,1);
+        Snake snake2(&map,&food,6,6,Direction::LEFT,1);
+        Human human1(&snake1,'w','s','a','d');
+        Human human2(&snake2,'i','k','j','l');
+        GameManager game(&map,&food,&object,{&human1,&human2});
+        VisualizeThread vis(&game,100);
+        vis.start();
+        game.start();
+        game.run();
+        game.stop();
+        vis.stop();
+        
+    }
+
+    
+    
+}

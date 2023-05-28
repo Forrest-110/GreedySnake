@@ -7,6 +7,8 @@
 #include "snake.hpp"
 #include "food.hpp"
 #include "object.hpp"
+#include <thread>
+#include <chrono>
 namespace SNAKE{
 
 enum class PlayerType{
@@ -31,11 +33,24 @@ class BasePlayer{
 
 class Human: public BasePlayer{
     
+    char up,down,left,right;
     
     public:
     Human(Snake *snake):BasePlayer(PlayerType::Human){
         this->score = 0;
         this->snake = snake;
+        this->up = 'w';
+        this->down = 's';
+        this->left = 'a';
+        this->right = 'd';
+    };
+    Human(Snake *snake,char up,char down,char left,char right):BasePlayer(PlayerType::Human){
+        this->score = 0;
+        this->snake = snake;
+        this->up = up;
+        this->down = down;
+        this->left = left;
+        this->right = right;
     };
     // ~Human(){
     //     delete snake;
@@ -62,6 +77,7 @@ class GameManager{
     Food *food;
     Object *object;
     std::vector<BasePlayer *> players;
+    std::vector<std::thread *> threads;
     bool isOver;
     public:
     GameManager(GridMap *map,Food *food,Object *object,BasePlayer *player){
@@ -69,6 +85,7 @@ class GameManager{
         this->food = food;
         this->object = object;
         this->players.push_back(player);
+        this->threads.push_back(nullptr);
         this->isOver = false;
     };
     GameManager(GridMap *map,Food *food,Object *object,std::vector<BasePlayer *> players){
@@ -76,6 +93,9 @@ class GameManager{
         this->food = food;
         this->object = object;
         this->players = players;
+        for (auto player:players){
+            this->threads.push_back(nullptr);
+        }
         this->isOver = false;
     };
     // ~GameManager(){
@@ -88,7 +108,14 @@ class GameManager{
     // };
     void start();
     void run();
+    void thread_run(BasePlayer* player);
     void end();
+    void stop(){
+        while (this->isOver==false)
+        {
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        }
+    }
 };
 }
 

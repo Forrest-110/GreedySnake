@@ -4,7 +4,7 @@ bool SNAKE::Food::generateFoodAtXY(int x, int y)
 {
     if (map->getCell(x, y) == SNAKE::CellType::EMPTY)
     {
-        map->setCell(x, y, SNAKE::CellType::FOOD);
+        map->setCellwoUpdate(x, y, SNAKE::CellType::FOOD);
         food_set.insert(Point{x, y, SNAKE::CellType::FOOD});
         return true;
     }
@@ -33,7 +33,7 @@ bool SNAKE::Food::removeFoodAtXY(int x, int y)
 {
     if (map->getCell(x, y) == SNAKE::CellType::FOOD)
     {
-        map->setCell(x, y, SNAKE::CellType::EMPTY);
+        map->setCellwoUpdate(x, y, SNAKE::CellType::EMPTY);
         food_set.erase(Point{x, y, SNAKE::CellType::FOOD});
         return true;
     }

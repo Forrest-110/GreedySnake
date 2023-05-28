@@ -3,6 +3,7 @@ project(GreedySnake)
 include_directories(
         include
         include/solver
+        # include/solver/dqn
 )
 add_library(${PROJECT_NAME} SHARED
         src/food.cpp

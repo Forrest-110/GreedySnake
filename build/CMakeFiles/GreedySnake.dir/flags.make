@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DGreedySnake_EXPORTS
 
-CXX_INCLUDES = -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver
+CXX_INCLUDES = -I/home/zyf/GreedySnake/include -I/home/zyf/GreedySnake/include/solver
 
-CXX_FLAGS = -g -fPIC
+CXX_FLAGS = -fPIC
 

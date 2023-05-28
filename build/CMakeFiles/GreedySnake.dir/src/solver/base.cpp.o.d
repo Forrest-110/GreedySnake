@@ -1,9 +1,8 @@
 CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o: \
- /home/zyf/Homework/GreedySnake/src/solver/base.cpp \
- /usr/include/stdc-predef.h \
- /home/zyf/Homework/GreedySnake/include/solver/base.hpp \
- /home/zyf/Homework/GreedySnake/include/map.hpp \
- /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
+ /home/zyf/GreedySnake/src/solver/base.cpp /usr/include/stdc-predef.h \
+ /home/zyf/GreedySnake/include/solver/base.hpp \
+ /home/zyf/GreedySnake/include/map.hpp /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -166,5 +165,5 @@ CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/zyf/Homework/GreedySnake/include/snake.hpp \
- /home/zyf/Homework/GreedySnake/include/food.hpp
+ /home/zyf/GreedySnake/include/snake.hpp \
+ /home/zyf/GreedySnake/include/food.hpp
