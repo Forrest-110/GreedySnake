@@ -57,10 +57,10 @@ RM = /home/zyf/miniconda3/lib/python3.10/site-packages/cmake/data/bin/cmake -E r
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zyf/Homework/GreedySnake
+CMAKE_SOURCE_DIR = /home/zyf/Homework/GreedySnake-online
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zyf/Homework/GreedySnake/build
+CMAKE_BINARY_DIR = /home/zyf/Homework/GreedySnake-online/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake/build/CMakeFiles /home/zyf/Homework/GreedySnake/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake-online/build/CMakeFiles /home/zyf/Homework/GreedySnake-online/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zyf/Homework/GreedySnake-online/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -373,6 +373,30 @@ src/solver/greedy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreedySnake.dir/build.make CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.s
 .PHONY : src/solver/greedy.cpp.s
 
+src/solver/hamilton.o: src/solver/hamilton.cpp.o
+.PHONY : src/solver/hamilton.o
+
+# target to build an object file
+src/solver/hamilton.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreedySnake.dir/build.make CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o
+.PHONY : src/solver/hamilton.cpp.o
+
+src/solver/hamilton.i: src/solver/hamilton.cpp.i
+.PHONY : src/solver/hamilton.i
+
+# target to preprocess a source file
+src/solver/hamilton.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreedySnake.dir/build.make CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.i
+.PHONY : src/solver/hamilton.cpp.i
+
+src/solver/hamilton.s: src/solver/hamilton.cpp.s
+.PHONY : src/solver/hamilton.s
+
+# target to generate assembly for a file
+src/solver/hamilton.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GreedySnake.dir/build.make CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.s
+.PHONY : src/solver/hamilton.cpp.s
+
 src/solver/path.o: src/solver/path.cpp.o
 .PHONY : src/solver/path.o
 
@@ -530,6 +554,9 @@ help:
 	@echo "... src/solver/greedy.o"
 	@echo "... src/solver/greedy.i"
 	@echo "... src/solver/greedy.s"
+	@echo "... src/solver/hamilton.o"
+	@echo "... src/solver/hamilton.i"
+	@echo "... src/solver/hamilton.s"
 	@echo "... src/solver/path.o"
 	@echo "... src/solver/path.i"
 	@echo "... src/solver/path.s"

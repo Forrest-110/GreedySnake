@@ -66,6 +66,7 @@ namespace SOLVER{
         SNAKE::Snake* getSnake(){return snake;};
         SNAKE::GridMap* getMap(){return snake->map;};
         virtual SNAKE::Direction next_Direction()=0;
+        virtual void reset_goal()=0;
     };
 
 

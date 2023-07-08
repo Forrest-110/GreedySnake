@@ -1,6 +1,7 @@
 CMakeFiles/GreedySnake.dir/src/game.cpp.o: \
- /home/zyf/Homework/GreedySnake/src/game.cpp /usr/include/stdc-predef.h \
- /home/zyf/Homework/GreedySnake/include/game.hpp \
+ /home/zyf/Homework/GreedySnake-online/src/game.cpp \
+ /usr/include/stdc-predef.h \
+ /home/zyf/Homework/GreedySnake-online/include/game.hpp \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -43,9 +44,10 @@ CMakeFiles/GreedySnake.dir/src/game.cpp.o: \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/range_access.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/zyf/Homework/GreedySnake/include/map.hpp /usr/include/c++/11/queue \
- /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
- /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_heap.h \
+ /home/zyf/Homework/GreedySnake-online/include/map.hpp \
+ /usr/include/c++/11/queue /usr/include/c++/11/deque \
+ /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
+ /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/stl_function.h \
  /usr/include/c++/11/backward/binders.h \
  /usr/include/c++/11/bits/stl_queue.h \
@@ -165,11 +167,11 @@ CMakeFiles/GreedySnake.dir/src/game.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/zyf/Homework/GreedySnake/include/solver/greedy.hpp \
- /home/zyf/Homework/GreedySnake/include/solver/base.hpp \
- /home/zyf/Homework/GreedySnake/include/snake.hpp \
- /home/zyf/Homework/GreedySnake/include/food.hpp \
- /home/zyf/Homework/GreedySnake/include/solver/path.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/solver/greedy.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/solver/base.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/snake.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/food.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/solver/path.hpp \
  /usr/include/c++/11/climits \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
@@ -179,8 +181,15 @@ CMakeFiles/GreedySnake.dir/src/game.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/zyf/Homework/GreedySnake/include/object.hpp /usr/include/conio.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /home/zyf/Homework/GreedySnake-online/include/solver/hamilton.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/object.hpp \
+ /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/refwrap.h /usr/include/c++/11/bits/unique_ptr.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/chrono \
+ /usr/include/c++/11/ratio /usr/include/c++/11/limits \
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
+ /usr/include/conio.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
@@ -202,9 +211,4 @@ CMakeFiles/GreedySnake.dir/src/game.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
- /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
- /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
- /usr/include/c++/11/bits/refwrap.h /usr/include/c++/11/bits/unique_ptr.h \
- /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/chrono \
- /usr/include/c++/11/ratio /usr/include/c++/11/limits \
- /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h
+ /usr/include/x86_64-linux-gnu/sys/ttydefaults.h

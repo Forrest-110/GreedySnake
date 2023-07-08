@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/test_solver",//可执行文件的位置
+            "program": "${workspaceFolder}/build/test_snake",//可执行文件的位置
             "args": [],//命令行带的参数
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

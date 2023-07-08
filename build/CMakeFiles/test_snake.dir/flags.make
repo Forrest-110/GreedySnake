@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/zyf/Homework/GreedySnake/include -I/home/zyf/Homework/GreedySnake/include/solver
+CXX_INCLUDES = -I/home/zyf/Homework/GreedySnake-online/include -I/home/zyf/Homework/GreedySnake-online/include/solver -isystem /home/zyf/ct_icp-old_master/cmake-build-Release/external/yaml-cpp/src/yaml-cpp/include
 
-CXX_FLAGS = -g
+CXX_FLAGS = 
 

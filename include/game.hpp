@@ -4,12 +4,12 @@
 #include <vector>
 #include "map.hpp"
 #include "greedy.hpp"
+#include "hamilton.hpp"
 #include "snake.hpp"
 #include "food.hpp"
 #include "object.hpp"
-#include "client.hpp"
-#include "server.hpp"
-#include <string>
+#include <thread>
+#include <chrono>
 namespace SNAKE{
 
 enum class PlayerType{
@@ -25,7 +25,7 @@ class BasePlayer{
     int score;
     public:
     BasePlayer(PlayerType type):type(type){};
-    
+    virtual void reset_goal()=0;
     PlayerType getType(){
         return type;
     }
@@ -34,52 +34,49 @@ class BasePlayer{
 
 class Human: public BasePlayer{
     
+    char up,down,left,right;
     
     public:
     Human(Snake *snake):BasePlayer(PlayerType::Human){
         this->score = 0;
         this->snake = snake;
+        this->up = 'w';
+        this->down = 's';
+        this->left = 'a';
+        this->right = 'd';
+    };
+    Human(Snake *snake,char up,char down,char left,char right):BasePlayer(PlayerType::Human){
+        this->score = 0;
+        this->snake = snake;
+        this->up = up;
+        this->down = down;
+        this->left = left;
+        this->right = right;
     };
     // ~Human(){
     //     delete snake;
     // };
+    void reset_goal(){;}
     Direction getNextDirection();
 };
 
 class Ai: public BasePlayer{
     private:
-    SOLVER::GreedySolver *greedy_solver;
+    // SOLVER::GreedySolver *greedy_solver;
+    SOLVER::BaseSolver *solver;
     public:
-    Ai(Snake *snake,SOLVER::GreedySolver *gsolver=nullptr):BasePlayer(PlayerType::AI){
-        this->greedy_solver = gsolver;
+    Ai(Snake *snake,SOLVER::BaseSolver *gsolver=nullptr):BasePlayer(PlayerType::AI){
+        this->solver = gsolver;
         this->snake=snake;
     };
     ~Ai(){};
+    void reset_goal(){
+        solver->reset_goal();
+    }
+
     Direction getNextDirection();
 };
 
-class ClientManager{
-    public:
-    GridMap map;
-    Food food;
-    Object object;
-    BasePlayer mainPlayer;
-    BasePlayer anotherPlayer;
-    bool isOver;
-    std::string name;
-    SOCKET::clientHandler client;
-    public:
-    ClientManager();
-    void handleMessageFromServer(string ) ;
-    void start(); 
-    void run();
-    void end();
-};
-
-enum class GameMode{
-    SinglePlayer,
-    MultiPlayer
-};
 
 class GameManager{
     public:
@@ -87,9 +84,7 @@ class GameManager{
     Food *food;
     Object *object;
     std::vector<BasePlayer *> players;
-    GameMode mode;
-    SOCKET::serverHandler server;
-    std::vector<int> clients;
+    std::vector<std::thread *> threads;
     bool isOver;
     public:
     GameManager(GridMap *map,Food *food,Object *object,BasePlayer *player){
@@ -97,6 +92,7 @@ class GameManager{
         this->food = food;
         this->object = object;
         this->players.push_back(player);
+        this->threads.push_back(nullptr);
         this->isOver = false;
     };
     GameManager(GridMap *map,Food *food,Object *object,std::vector<BasePlayer *> players){
@@ -104,13 +100,29 @@ class GameManager{
         this->food = food;
         this->object = object;
         this->players = players;
+        for (auto player:players){
+            this->threads.push_back(nullptr);
+        }
         this->isOver = false;
     };
-    void start();
-    void run_single_player();
-    void run_multi_player();
+    // ~GameManager(){
+    //     delete map;
+    //     delete food;
+    //     delete object;
+    //     for (auto player:players){
+    //         delete player;
+    //     }
+    // };
+    void start(int f=2,int o=2);
     void run();
+    void thread_run(BasePlayer* player);
     void end();
+    void stop(){
+        while (this->isOver==false)
+        {
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        }
+    }
 };
 }
 

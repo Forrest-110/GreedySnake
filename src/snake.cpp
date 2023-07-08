@@ -24,12 +24,14 @@ SNAKE::Direction SNAKE::GetRandomDirection()
     }
 bool SNAKE::Snake::move(SNAKE::Direction direction){
     this->head.move(direction);
+    bool ret=false;
     if (this->body.size()!=0)
         this->body[0].move(this->head.getLastDirection());
     for (int i = 1; i < this->body.size() ; i++){
         this->body[i].move(this->body[i - 1].getLastDirection());
     }
     if (this->head.eatFood()){
+        ret=true;
         this->score++;
         this->map->score++;
         while(!(this->food->generateFoodRandomly()));
@@ -61,6 +63,7 @@ bool SNAKE::Snake::move(SNAKE::Direction direction){
         newblock=new SnakeBlock(this->map,this->food,x_toinsert,y_toinsert,dir_toinsert,
         this->body[this->body.size() - 1].getVelocity(),nullptr,&this->body[this->body.size() - 1]);
         }else{
+            
             dir_toinsert=this->head.getDirection();
             switch (dir_toinsert){
             case SNAKE::Direction::UP:
@@ -88,12 +91,13 @@ bool SNAKE::Snake::move(SNAKE::Direction direction){
         // delete newblock;
         this->length++;
     }
+    
     if (this->head.isDead()){
         std::cout<<"Snake is dead"<<std::endl;
         this->_isDead = true;
         return false;
     }
-    return true;
+    return ret;
 }
 
 // bool SNAKE::Snake::move(){

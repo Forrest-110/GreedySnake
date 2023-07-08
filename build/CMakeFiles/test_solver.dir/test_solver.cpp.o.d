@@ -1,7 +1,7 @@
 CMakeFiles/test_solver.dir/test_solver.cpp.o: \
- /home/zyf/Homework/GreedySnake/test_solver.cpp \
+ /home/zyf/Homework/GreedySnake-online/test_solver.cpp \
  /usr/include/stdc-predef.h \
- /home/zyf/Homework/GreedySnake/include/map.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/map.hpp \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -165,13 +165,13 @@ CMakeFiles/test_solver.dir/test_solver.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/zyf/Homework/GreedySnake/include/visualize.hpp \
- /home/zyf/Homework/GreedySnake/include/game.hpp \
- /home/zyf/Homework/GreedySnake/include/solver/greedy.hpp \
- /home/zyf/Homework/GreedySnake/include/solver/base.hpp \
- /home/zyf/Homework/GreedySnake/include/snake.hpp \
- /home/zyf/Homework/GreedySnake/include/food.hpp \
- /home/zyf/Homework/GreedySnake/include/solver/path.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/visualize.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/game.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/solver/greedy.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/solver/base.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/snake.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/food.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/solver/path.hpp \
  /usr/include/c++/11/climits \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
@@ -181,7 +181,8 @@ CMakeFiles/test_solver.dir/test_solver.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/zyf/Homework/GreedySnake/include/object.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/solver/hamilton.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/object.hpp \
  /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
  /usr/include/c++/11/bits/refwrap.h /usr/include/c++/11/bits/unique_ptr.h \
  /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/chrono \

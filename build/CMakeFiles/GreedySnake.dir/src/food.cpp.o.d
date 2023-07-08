@@ -1,7 +1,8 @@
 CMakeFiles/GreedySnake.dir/src/food.cpp.o: \
- /home/zyf/Homework/GreedySnake/src/food.cpp /usr/include/stdc-predef.h \
- /home/zyf/Homework/GreedySnake/include/food.hpp \
- /home/zyf/Homework/GreedySnake/include/map.hpp \
+ /home/zyf/Homework/GreedySnake-online/src/food.cpp \
+ /usr/include/stdc-predef.h \
+ /home/zyf/Homework/GreedySnake-online/include/food.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/map.hpp \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

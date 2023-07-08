@@ -60,7 +60,7 @@ class PathSolver:public BaseSolver{
     std::deque<SNAKE::Direction> shortest_path_to(Pos des);
     std::deque<SNAKE::Direction> longest_path_to(Pos des);
     std::deque<SNAKE::Direction> longest_path_to_tail();
-    std::deque<SNAKE::Direction> shortest_path_to_food();
+    std::deque<SNAKE::Direction> shortest_path_to_food(Pos *foodpoint=nullptr);
     std::deque<SNAKE::Direction> path_to(Pos des, bool longest=false);
 
 
@@ -89,7 +89,9 @@ class PathSolver:public BaseSolver{
     SNAKE::Direction next_Direction(){
         return SNAKE::Direction::NONE;
     }
-
+    void reset_goal(){
+        ;
+    }
 
 
 

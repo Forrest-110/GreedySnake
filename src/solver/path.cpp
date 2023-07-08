@@ -120,7 +120,7 @@ std::deque<SNAKE::Direction> SOLVER::PathSolver::longest_path_to_tail(){
     return path_to(tail,true);
 }
 
-std::deque<SNAKE::Direction> SOLVER::PathSolver::shortest_path_to_food(){
+std::deque<SNAKE::Direction> SOLVER::PathSolver::shortest_path_to_food(SOLVER::Pos *foodpoint){
     auto food_set=getFood()->food_set;
     int minlen=INT_MAX;
     int tmp;
@@ -132,6 +132,11 @@ std::deque<SNAKE::Direction> SOLVER::PathSolver::shortest_path_to_food(){
         if (tmp<minlen){
             minlen=tmp;
             final_ret=ret;
+            if (foodpoint!=nullptr){
+                foodpoint->x=food.x;
+                foodpoint->y=food.y;
+            }
+            
         }
     }
     return final_ret;

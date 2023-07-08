@@ -15,7 +15,7 @@ namespace SOLVER{
         };
         
         SNAKE::Direction next_Direction();
-
+        void reset_goal(){;}
     };
 }
 

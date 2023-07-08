@@ -19,12 +19,13 @@ int main()
     
     
 
-    Snake snake(&map,&food,5,5,Direction::UP,1);
-
+    // Snake snake(&map,&food,5,5,Direction::UP,1);
+    Snake snake(&map,&food,Direction::UP,1,{{5,5},{5,6}});
     PathSolver path_solver(&snake);
 	GreedySolver greedy_solver(&snake,&path_solver);
+    HamiltonSolver hamilton_solver(&snake,&path_solver);
     
-	Ai ai(&snake,&greedy_solver);
+	Ai ai(&snake,&hamilton_solver);
     Human human(&snake);
     GameManager game(&map,&food,&object,{&ai});
     VisualizeThread vis(&game,100);

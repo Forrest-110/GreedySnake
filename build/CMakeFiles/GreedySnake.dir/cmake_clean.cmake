@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o.d"
   "CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o"
   "CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o.d"
+  "CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o"
+  "CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o.d"
   "CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o"
   "CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o.d"
   "CMakeFiles/GreedySnake.dir/src/visualize.cpp.o"

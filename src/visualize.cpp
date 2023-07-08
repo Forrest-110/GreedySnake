@@ -6,7 +6,7 @@ void SNAKE::VisualizeThread::run()
     {
         
         this->game->map->update();
-        std::system("clear");
+        // std::system("clear");
         for (auto player : this->game->players)
         {
             

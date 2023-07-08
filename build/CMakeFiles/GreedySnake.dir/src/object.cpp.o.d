@@ -1,7 +1,8 @@
 CMakeFiles/GreedySnake.dir/src/object.cpp.o: \
- /home/zyf/Homework/GreedySnake/src/object.cpp /usr/include/stdc-predef.h \
- /home/zyf/Homework/GreedySnake/include/object.hpp \
- /home/zyf/Homework/GreedySnake/include/map.hpp \
+ /home/zyf/Homework/GreedySnake-online/src/object.cpp \
+ /usr/include/stdc-predef.h \
+ /home/zyf/Homework/GreedySnake-online/include/object.hpp \
+ /home/zyf/Homework/GreedySnake-online/include/map.hpp \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
