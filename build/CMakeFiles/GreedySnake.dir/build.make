@@ -53,10 +53,10 @@ RM = /home/zyf/miniconda3/lib/python3.10/site-packages/cmake/data/bin/cmake -E r
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zyf/Homework/GreedySnake-online
+CMAKE_SOURCE_DIR = /home/zyf/Homework/GreedySnake
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zyf/Homework/GreedySnake-online/build
+CMAKE_BINARY_DIR = /home/zyf/Homework/GreedySnake/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/GreedySnake.dir/depend.make
@@ -70,144 +70,144 @@ include CMakeFiles/GreedySnake.dir/progress.make
 include CMakeFiles/GreedySnake.dir/flags.make
 
 CMakeFiles/GreedySnake.dir/src/food.cpp.o: CMakeFiles/GreedySnake.dir/flags.make
-CMakeFiles/GreedySnake.dir/src/food.cpp.o: /home/zyf/Homework/GreedySnake-online/src/food.cpp
+CMakeFiles/GreedySnake.dir/src/food.cpp.o: /home/zyf/Homework/GreedySnake/src/food.cpp
 CMakeFiles/GreedySnake.dir/src/food.cpp.o: CMakeFiles/GreedySnake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake-online/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GreedySnake.dir/src/food.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/food.cpp.o -MF CMakeFiles/GreedySnake.dir/src/food.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/food.cpp.o -c /home/zyf/Homework/GreedySnake-online/src/food.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GreedySnake.dir/src/food.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/food.cpp.o -MF CMakeFiles/GreedySnake.dir/src/food.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/food.cpp.o -c /home/zyf/Homework/GreedySnake/src/food.cpp
 
 CMakeFiles/GreedySnake.dir/src/food.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GreedySnake.dir/src/food.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake-online/src/food.cpp > CMakeFiles/GreedySnake.dir/src/food.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake/src/food.cpp > CMakeFiles/GreedySnake.dir/src/food.cpp.i
 
 CMakeFiles/GreedySnake.dir/src/food.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GreedySnake.dir/src/food.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake-online/src/food.cpp -o CMakeFiles/GreedySnake.dir/src/food.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake/src/food.cpp -o CMakeFiles/GreedySnake.dir/src/food.cpp.s
 
 CMakeFiles/GreedySnake.dir/src/game.cpp.o: CMakeFiles/GreedySnake.dir/flags.make
-CMakeFiles/GreedySnake.dir/src/game.cpp.o: /home/zyf/Homework/GreedySnake-online/src/game.cpp
+CMakeFiles/GreedySnake.dir/src/game.cpp.o: /home/zyf/Homework/GreedySnake/src/game.cpp
 CMakeFiles/GreedySnake.dir/src/game.cpp.o: CMakeFiles/GreedySnake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake-online/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GreedySnake.dir/src/game.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/game.cpp.o -MF CMakeFiles/GreedySnake.dir/src/game.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/game.cpp.o -c /home/zyf/Homework/GreedySnake-online/src/game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GreedySnake.dir/src/game.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/game.cpp.o -MF CMakeFiles/GreedySnake.dir/src/game.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/game.cpp.o -c /home/zyf/Homework/GreedySnake/src/game.cpp
 
 CMakeFiles/GreedySnake.dir/src/game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GreedySnake.dir/src/game.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake-online/src/game.cpp > CMakeFiles/GreedySnake.dir/src/game.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake/src/game.cpp > CMakeFiles/GreedySnake.dir/src/game.cpp.i
 
 CMakeFiles/GreedySnake.dir/src/game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GreedySnake.dir/src/game.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake-online/src/game.cpp -o CMakeFiles/GreedySnake.dir/src/game.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake/src/game.cpp -o CMakeFiles/GreedySnake.dir/src/game.cpp.s
 
 CMakeFiles/GreedySnake.dir/src/map.cpp.o: CMakeFiles/GreedySnake.dir/flags.make
-CMakeFiles/GreedySnake.dir/src/map.cpp.o: /home/zyf/Homework/GreedySnake-online/src/map.cpp
+CMakeFiles/GreedySnake.dir/src/map.cpp.o: /home/zyf/Homework/GreedySnake/src/map.cpp
 CMakeFiles/GreedySnake.dir/src/map.cpp.o: CMakeFiles/GreedySnake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake-online/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GreedySnake.dir/src/map.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/map.cpp.o -MF CMakeFiles/GreedySnake.dir/src/map.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/map.cpp.o -c /home/zyf/Homework/GreedySnake-online/src/map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GreedySnake.dir/src/map.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/map.cpp.o -MF CMakeFiles/GreedySnake.dir/src/map.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/map.cpp.o -c /home/zyf/Homework/GreedySnake/src/map.cpp
 
 CMakeFiles/GreedySnake.dir/src/map.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GreedySnake.dir/src/map.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake-online/src/map.cpp > CMakeFiles/GreedySnake.dir/src/map.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake/src/map.cpp > CMakeFiles/GreedySnake.dir/src/map.cpp.i
 
 CMakeFiles/GreedySnake.dir/src/map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GreedySnake.dir/src/map.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake-online/src/map.cpp -o CMakeFiles/GreedySnake.dir/src/map.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake/src/map.cpp -o CMakeFiles/GreedySnake.dir/src/map.cpp.s
 
 CMakeFiles/GreedySnake.dir/src/snake.cpp.o: CMakeFiles/GreedySnake.dir/flags.make
-CMakeFiles/GreedySnake.dir/src/snake.cpp.o: /home/zyf/Homework/GreedySnake-online/src/snake.cpp
+CMakeFiles/GreedySnake.dir/src/snake.cpp.o: /home/zyf/Homework/GreedySnake/src/snake.cpp
 CMakeFiles/GreedySnake.dir/src/snake.cpp.o: CMakeFiles/GreedySnake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake-online/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GreedySnake.dir/src/snake.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/snake.cpp.o -MF CMakeFiles/GreedySnake.dir/src/snake.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/snake.cpp.o -c /home/zyf/Homework/GreedySnake-online/src/snake.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GreedySnake.dir/src/snake.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/snake.cpp.o -MF CMakeFiles/GreedySnake.dir/src/snake.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/snake.cpp.o -c /home/zyf/Homework/GreedySnake/src/snake.cpp
 
 CMakeFiles/GreedySnake.dir/src/snake.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GreedySnake.dir/src/snake.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake-online/src/snake.cpp > CMakeFiles/GreedySnake.dir/src/snake.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake/src/snake.cpp > CMakeFiles/GreedySnake.dir/src/snake.cpp.i
 
 CMakeFiles/GreedySnake.dir/src/snake.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GreedySnake.dir/src/snake.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake-online/src/snake.cpp -o CMakeFiles/GreedySnake.dir/src/snake.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake/src/snake.cpp -o CMakeFiles/GreedySnake.dir/src/snake.cpp.s
 
 CMakeFiles/GreedySnake.dir/src/object.cpp.o: CMakeFiles/GreedySnake.dir/flags.make
-CMakeFiles/GreedySnake.dir/src/object.cpp.o: /home/zyf/Homework/GreedySnake-online/src/object.cpp
+CMakeFiles/GreedySnake.dir/src/object.cpp.o: /home/zyf/Homework/GreedySnake/src/object.cpp
 CMakeFiles/GreedySnake.dir/src/object.cpp.o: CMakeFiles/GreedySnake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake-online/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GreedySnake.dir/src/object.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/object.cpp.o -MF CMakeFiles/GreedySnake.dir/src/object.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/object.cpp.o -c /home/zyf/Homework/GreedySnake-online/src/object.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GreedySnake.dir/src/object.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/object.cpp.o -MF CMakeFiles/GreedySnake.dir/src/object.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/object.cpp.o -c /home/zyf/Homework/GreedySnake/src/object.cpp
 
 CMakeFiles/GreedySnake.dir/src/object.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GreedySnake.dir/src/object.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake-online/src/object.cpp > CMakeFiles/GreedySnake.dir/src/object.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake/src/object.cpp > CMakeFiles/GreedySnake.dir/src/object.cpp.i
 
 CMakeFiles/GreedySnake.dir/src/object.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GreedySnake.dir/src/object.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake-online/src/object.cpp -o CMakeFiles/GreedySnake.dir/src/object.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake/src/object.cpp -o CMakeFiles/GreedySnake.dir/src/object.cpp.s
 
 CMakeFiles/GreedySnake.dir/src/visualize.cpp.o: CMakeFiles/GreedySnake.dir/flags.make
-CMakeFiles/GreedySnake.dir/src/visualize.cpp.o: /home/zyf/Homework/GreedySnake-online/src/visualize.cpp
+CMakeFiles/GreedySnake.dir/src/visualize.cpp.o: /home/zyf/Homework/GreedySnake/src/visualize.cpp
 CMakeFiles/GreedySnake.dir/src/visualize.cpp.o: CMakeFiles/GreedySnake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake-online/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GreedySnake.dir/src/visualize.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/visualize.cpp.o -MF CMakeFiles/GreedySnake.dir/src/visualize.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/visualize.cpp.o -c /home/zyf/Homework/GreedySnake-online/src/visualize.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GreedySnake.dir/src/visualize.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/visualize.cpp.o -MF CMakeFiles/GreedySnake.dir/src/visualize.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/visualize.cpp.o -c /home/zyf/Homework/GreedySnake/src/visualize.cpp
 
 CMakeFiles/GreedySnake.dir/src/visualize.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GreedySnake.dir/src/visualize.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake-online/src/visualize.cpp > CMakeFiles/GreedySnake.dir/src/visualize.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake/src/visualize.cpp > CMakeFiles/GreedySnake.dir/src/visualize.cpp.i
 
 CMakeFiles/GreedySnake.dir/src/visualize.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GreedySnake.dir/src/visualize.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake-online/src/visualize.cpp -o CMakeFiles/GreedySnake.dir/src/visualize.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake/src/visualize.cpp -o CMakeFiles/GreedySnake.dir/src/visualize.cpp.s
 
 CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o: CMakeFiles/GreedySnake.dir/flags.make
-CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o: /home/zyf/Homework/GreedySnake-online/src/solver/base.cpp
+CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o: /home/zyf/Homework/GreedySnake/src/solver/base.cpp
 CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o: CMakeFiles/GreedySnake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake-online/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o -MF CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o -c /home/zyf/Homework/GreedySnake-online/src/solver/base.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o -MF CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/solver/base.cpp.o -c /home/zyf/Homework/GreedySnake/src/solver/base.cpp
 
 CMakeFiles/GreedySnake.dir/src/solver/base.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GreedySnake.dir/src/solver/base.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake-online/src/solver/base.cpp > CMakeFiles/GreedySnake.dir/src/solver/base.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake/src/solver/base.cpp > CMakeFiles/GreedySnake.dir/src/solver/base.cpp.i
 
 CMakeFiles/GreedySnake.dir/src/solver/base.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GreedySnake.dir/src/solver/base.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake-online/src/solver/base.cpp -o CMakeFiles/GreedySnake.dir/src/solver/base.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake/src/solver/base.cpp -o CMakeFiles/GreedySnake.dir/src/solver/base.cpp.s
 
 CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o: CMakeFiles/GreedySnake.dir/flags.make
-CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o: /home/zyf/Homework/GreedySnake-online/src/solver/path.cpp
+CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o: /home/zyf/Homework/GreedySnake/src/solver/path.cpp
 CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o: CMakeFiles/GreedySnake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake-online/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o -MF CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o -c /home/zyf/Homework/GreedySnake-online/src/solver/path.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o -MF CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o -c /home/zyf/Homework/GreedySnake/src/solver/path.cpp
 
 CMakeFiles/GreedySnake.dir/src/solver/path.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GreedySnake.dir/src/solver/path.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake-online/src/solver/path.cpp > CMakeFiles/GreedySnake.dir/src/solver/path.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake/src/solver/path.cpp > CMakeFiles/GreedySnake.dir/src/solver/path.cpp.i
 
 CMakeFiles/GreedySnake.dir/src/solver/path.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GreedySnake.dir/src/solver/path.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake-online/src/solver/path.cpp -o CMakeFiles/GreedySnake.dir/src/solver/path.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake/src/solver/path.cpp -o CMakeFiles/GreedySnake.dir/src/solver/path.cpp.s
 
 CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o: CMakeFiles/GreedySnake.dir/flags.make
-CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o: /home/zyf/Homework/GreedySnake-online/src/solver/greedy.cpp
+CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o: /home/zyf/Homework/GreedySnake/src/solver/greedy.cpp
 CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o: CMakeFiles/GreedySnake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake-online/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o -MF CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o -c /home/zyf/Homework/GreedySnake-online/src/solver/greedy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o -MF CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o -c /home/zyf/Homework/GreedySnake/src/solver/greedy.cpp
 
 CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake-online/src/solver/greedy.cpp > CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake/src/solver/greedy.cpp > CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.i
 
 CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake-online/src/solver/greedy.cpp -o CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake/src/solver/greedy.cpp -o CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.s
 
 CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o: CMakeFiles/GreedySnake.dir/flags.make
-CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o: /home/zyf/Homework/GreedySnake-online/src/solver/hamilton.cpp
+CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o: /home/zyf/Homework/GreedySnake/src/solver/hamilton.cpp
 CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o: CMakeFiles/GreedySnake.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake-online/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o -MF CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o -c /home/zyf/Homework/GreedySnake-online/src/solver/hamilton.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o -MF CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o.d -o CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o -c /home/zyf/Homework/GreedySnake/src/solver/hamilton.cpp
 
 CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake-online/src/solver/hamilton.cpp > CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zyf/Homework/GreedySnake/src/solver/hamilton.cpp > CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.i
 
 CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake-online/src/solver/hamilton.cpp -o CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zyf/Homework/GreedySnake/src/solver/hamilton.cpp -o CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.s
 
 # Object files for target GreedySnake
 GreedySnake_OBJECTS = \
@@ -237,7 +237,7 @@ libGreedySnake.so: CMakeFiles/GreedySnake.dir/src/solver/greedy.cpp.o
 libGreedySnake.so: CMakeFiles/GreedySnake.dir/src/solver/hamilton.cpp.o
 libGreedySnake.so: CMakeFiles/GreedySnake.dir/build.make
 libGreedySnake.so: CMakeFiles/GreedySnake.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zyf/Homework/GreedySnake-online/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX shared library libGreedySnake.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zyf/Homework/GreedySnake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX shared library libGreedySnake.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GreedySnake.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -249,6 +249,6 @@ CMakeFiles/GreedySnake.dir/clean:
 .PHONY : CMakeFiles/GreedySnake.dir/clean
 
 CMakeFiles/GreedySnake.dir/depend:
-	cd /home/zyf/Homework/GreedySnake-online/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zyf/Homework/GreedySnake-online /home/zyf/Homework/GreedySnake-online /home/zyf/Homework/GreedySnake-online/build /home/zyf/Homework/GreedySnake-online/build /home/zyf/Homework/GreedySnake-online/build/CMakeFiles/GreedySnake.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zyf/Homework/GreedySnake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zyf/Homework/GreedySnake /home/zyf/Homework/GreedySnake /home/zyf/Homework/GreedySnake/build /home/zyf/Homework/GreedySnake/build /home/zyf/Homework/GreedySnake/build/CMakeFiles/GreedySnake.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/GreedySnake.dir/depend
 

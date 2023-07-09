@@ -24,11 +24,11 @@ Options readFromArg(int argc, char** argv){
     Options options;
     if (argc==1){
         options.map_size=10;
-        options.game_mode=Options::MODE::single;
+        options.game_mode=Options::MODE::ai;
         options.game_speed=Options::SPEED::medium;
         options.food_num=1;
         options.object_num=1;
-        options.ai_solver=Options::AIsolver::greedy;
+        options.ai_solver=Options::AIsolver::hamilton;
     }else if (argc==2){
         YAML::Node config = YAML::LoadFile(argv[1]);
         options.map_size=config["map_size"].as<int>();
@@ -95,18 +95,15 @@ int main(int argc, char** argv){
         game.run();
         vis.stop();
     }else if (mode==3){
-        Snake snake(&map,&food,5,5,Direction::UP,1);
-        PathSolver path_solver(&snake);
-        
         if (options.ai_solver==Options::AIsolver::greedy){
-            
-	    GreedySolver greedy_solver(&snake,&path_solver);
-    
-	    Ai ai(&snake,&greedy_solver);
+                Snake snake(&map,&food,Direction::UP,1,{{5,5},{5,6}});
+        PathSolver path_solver(&snake);
+        GreedySolver greedy_solver(&snake,&path_solver);
+        HamiltonSolver hamilton_solver(&snake,&path_solver);
+        Ai ai(&snake,&greedy_solver);
+        Human human(&snake);
         GameManager game(&map,&food,&object,{&ai});
         VisualizeThread vis(&game,intervel);
-        
-    
         vis.start();
     
         game.start(food_num,object_num);
@@ -115,12 +112,14 @@ int main(int argc, char** argv){
         game.run();
         vis.stop();
         }else{
-            HamiltonSolver hamilton_solver(&snake,&path_solver);
-            Ai ai(&snake,&hamilton_solver);
-            GameManager game(&map,&food,&object,{&ai});
-            VisualizeThread vis(&game,intervel);
-        
-    
+            Snake snake(&map,&food,Direction::UP,1,{{5,5},{5,6}});
+        PathSolver path_solver(&snake);
+        GreedySolver greedy_solver(&snake,&path_solver);
+        HamiltonSolver hamilton_solver(&snake,&path_solver);
+        Ai ai(&snake,&hamilton_solver);
+        Human human(&snake);
+        GameManager game(&map,&food,&object,{&ai});
+        VisualizeThread vis(&game,intervel);
         vis.start();
     
         game.start(food_num,object_num);
@@ -129,6 +128,8 @@ int main(int argc, char** argv){
         game.run();
         vis.stop();
         }
+        
+        
         
         
     }else{

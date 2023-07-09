@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/snake.dir/run.cpp.o -o snake  -Wl,-rpath,/home/zyf/Homework/GreedySnake-online/build libGreedySnake.so /home/zyf/ct_icp-old_master/cmake-build-Release/external/yaml-cpp/src/yaml-cpp-build/libyaml-cpp.a 
+/usr/bin/c++ CMakeFiles/snake.dir/run.cpp.o -o snake  -Wl,-rpath,/home/zyf/Homework/GreedySnake/build libGreedySnake.so /home/zyf/ct_icp-old_master/cmake-build-Release/external/yaml-cpp/src/yaml-cpp-build/libyaml-cpp.a 
