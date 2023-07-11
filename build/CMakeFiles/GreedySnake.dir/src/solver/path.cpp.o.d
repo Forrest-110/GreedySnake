@@ -1,10 +1,9 @@
 CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o: \
- /home/zyf/Homework/GreedySnake/src/solver/path.cpp \
- /usr/include/stdc-predef.h \
- /home/zyf/Homework/GreedySnake/include/solver/path.hpp \
- /home/zyf/Homework/GreedySnake/include/solver/base.hpp \
- /home/zyf/Homework/GreedySnake/include/map.hpp \
- /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
+ /home/jamil/GreedySnake/src/solver/path.cpp /usr/include/stdc-predef.h \
+ /home/jamil/GreedySnake/include/solver/path.hpp \
+ /home/jamil/GreedySnake/include/solver/base.hpp \
+ /home/jamil/GreedySnake/include/map.hpp /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -166,18 +165,18 @@ CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc \
- /home/zyf/Homework/GreedySnake/include/snake.hpp \
- /home/zyf/Homework/GreedySnake/include/food.hpp \
- /usr/include/c++/11/climits \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
- /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
- /usr/include/x86_64-linux-gnu/bits/local_lim.h \
- /usr/include/linux/limits.h \
- /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /usr/include/c++/11/bits/istream.tcc /usr/include/SFML/Graphics.hpp \
+ /usr/include/SFML/Window.hpp /usr/include/SFML/System.hpp \
+ /usr/include/SFML/Config.hpp /usr/include/SFML/System/Clock.hpp \
+ /usr/include/SFML/System/Export.hpp /usr/include/SFML/System/Time.hpp \
+ /usr/include/SFML/System/Err.hpp \
+ /usr/include/SFML/System/FileInputStream.hpp \
+ /usr/include/SFML/System/InputStream.hpp \
+ /usr/include/SFML/System/NonCopyable.hpp \
+ /usr/include/SFML/System/Lock.hpp \
+ /usr/include/SFML/System/MemoryInputStream.hpp \
+ /usr/include/SFML/System/Mutex.hpp /usr/include/SFML/System/Sleep.hpp \
+ /usr/include/SFML/System/String.hpp /usr/include/SFML/System/Utf.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
@@ -187,7 +186,72 @@ CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o: \
  /usr/include/c++/11/bits/std_function.h \
  /usr/include/c++/11/unordered_map \
  /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/random \
+ /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/locale \
+ /usr/include/c++/11/bits/locale_facets_nonio.h /usr/include/c++/11/ctime \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/11/bits/locale_conv.h \
+ /usr/include/c++/11/bits/unique_ptr.h /usr/include/SFML/System/Utf.inl \
+ /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
+ /usr/include/SFML/System/String.inl /usr/include/SFML/System/Thread.hpp \
+ /usr/include/SFML/System/Thread.inl \
+ /usr/include/SFML/System/ThreadLocal.hpp \
+ /usr/include/SFML/System/ThreadLocalPtr.hpp \
+ /usr/include/SFML/System/ThreadLocalPtr.inl \
+ /usr/include/SFML/System/Vector2.hpp \
+ /usr/include/SFML/System/Vector2.inl \
+ /usr/include/SFML/System/Vector3.hpp \
+ /usr/include/SFML/System/Vector3.inl \
+ /usr/include/SFML/Window/Context.hpp /usr/include/SFML/Window/Export.hpp \
+ /usr/include/SFML/Window/GlResource.hpp \
+ /usr/include/SFML/Window/ContextSettings.hpp \
+ /usr/include/SFML/Window/Event.hpp /usr/include/SFML/Window/Joystick.hpp \
+ /usr/include/SFML/Window/Keyboard.hpp /usr/include/SFML/Window/Mouse.hpp \
+ /usr/include/SFML/Window/Sensor.hpp /usr/include/SFML/Window/Touch.hpp \
+ /usr/include/SFML/Window/VideoMode.hpp \
+ /usr/include/SFML/Window/Window.hpp \
+ /usr/include/SFML/Window/WindowHandle.hpp \
+ /usr/include/SFML/Window/WindowStyle.hpp \
+ /usr/include/SFML/Graphics/BlendMode.hpp \
+ /usr/include/SFML/Graphics/Export.hpp \
+ /usr/include/SFML/Graphics/CircleShape.hpp \
+ /usr/include/SFML/Graphics/Shape.hpp \
+ /usr/include/SFML/Graphics/Drawable.hpp \
+ /usr/include/SFML/Graphics/RenderStates.hpp \
+ /usr/include/SFML/Graphics/Transform.hpp \
+ /usr/include/SFML/Graphics/Rect.hpp /usr/include/SFML/Graphics/Rect.inl \
+ /usr/include/SFML/Graphics/Transformable.hpp \
+ /usr/include/SFML/Graphics/VertexArray.hpp \
+ /usr/include/SFML/Graphics/Vertex.hpp \
+ /usr/include/SFML/Graphics/Color.hpp \
+ /usr/include/SFML/Graphics/PrimitiveType.hpp \
+ /usr/include/SFML/Graphics/ConvexShape.hpp \
+ /usr/include/SFML/Graphics/Font.hpp /usr/include/SFML/Graphics/Glyph.hpp \
+ /usr/include/SFML/Graphics/Texture.hpp \
+ /usr/include/SFML/Graphics/Image.hpp /usr/include/c++/11/map \
+ /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \
+ /usr/include/c++/11/bits/stl_multimap.h \
+ /usr/include/SFML/Graphics/RectangleShape.hpp \
+ /usr/include/SFML/Graphics/RenderTarget.hpp \
+ /usr/include/SFML/Graphics/View.hpp \
+ /usr/include/SFML/Graphics/RenderTexture.hpp \
+ /usr/include/SFML/Graphics/RenderWindow.hpp \
+ /usr/include/SFML/Graphics/Shader.hpp \
+ /usr/include/SFML/Graphics/Glsl.hpp /usr/include/SFML/Graphics/Glsl.inl \
+ /usr/include/SFML/Graphics/Sprite.hpp \
+ /usr/include/SFML/Graphics/Text.hpp \
+ /home/jamil/GreedySnake/include/snake.hpp \
+ /home/jamil/GreedySnake/include/food.hpp /usr/include/c++/11/climits \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/11/random \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -215,4 +279,4 @@ CMakeFiles/GreedySnake.dir/src/solver/path.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
  /usr/include/c++/11/bits/random.tcc /usr/include/c++/11/numeric \
  /usr/include/c++/11/bits/stl_numeric.h /usr/include/c++/11/bit \
- /usr/include/c++/11/pstl/glue_numeric_defs.h /usr/include/c++/11/ctime
+ /usr/include/c++/11/pstl/glue_numeric_defs.h

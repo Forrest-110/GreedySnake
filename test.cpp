@@ -17,6 +17,7 @@ struct Options{
     int object_num;
 
     enum struct AIsolver{ greedy, hamilton } ai_solver;
+    
 
 };
 
@@ -86,59 +87,63 @@ int main(int argc, char** argv){
     // std::cin>>mode;
 
     if (mode==1){
+        //单人模式
         Snake snake(&map,&food,5,5,Direction::UP,1);
         Human human(&snake);
         GameManager game(&map,&food,&object,{&human});
-        VisualizeThread vis(&game,intervel);
+        VisualizeThread vis(&game, &snake, intervel);
         vis.start();
         game.start(food_num,object_num);
         game.run();
         vis.stop();
     }else if (mode==3){
+        //AI模式
         if (options.ai_solver==Options::AIsolver::greedy){
-                Snake snake(&map,&food,Direction::UP,1,{{5,5},{5,6}});
-        PathSolver path_solver(&snake);
-        GreedySolver greedy_solver(&snake,&path_solver);
-        HamiltonSolver hamilton_solver(&snake,&path_solver);
-        Ai ai(&snake,&greedy_solver);
-        Human human(&snake);
-        GameManager game(&map,&food,&object,{&ai});
-        VisualizeThread vis(&game,intervel);
-        vis.start();
-    
-        game.start(food_num,object_num);
-    
-        // while (1);
-        game.run();
-        vis.stop();
+            Snake snake(&map,&food,Direction::UP,1,{{5,5},{5,6}});
+            PathSolver path_solver(&snake);
+            GreedySolver greedy_solver(&snake,&path_solver);
+            HamiltonSolver hamilton_solver(&snake,&path_solver);
+            Ai ai(&snake,&greedy_solver);
+            Human human(&snake);
+            GameManager game(&map,&food,&object,{&ai});
+            VisualizeThread vis(&game, &snake, intervel);
+            vis.start();
+        
+            game.start(food_num,object_num);
+        
+            // while (1);
+            game.run();
+            vis.stop();
         }else{
             Snake snake(&map,&food,Direction::UP,1,{{5,5},{5,6}});
-        PathSolver path_solver(&snake);
-        GreedySolver greedy_solver(&snake,&path_solver);
-        HamiltonSolver hamilton_solver(&snake,&path_solver);
-        Ai ai(&snake,&hamilton_solver);
-        Human human(&snake);
-        GameManager game(&map,&food,&object,{&ai});
-        VisualizeThread vis(&game,intervel);
-        vis.start();
-    
-        game.start(food_num,object_num);
-    
-        // while (1);
-        game.run();
-        vis.stop();
+            PathSolver path_solver(&snake);
+            GreedySolver greedy_solver(&snake,&path_solver);
+            HamiltonSolver hamilton_solver(&snake,&path_solver);
+            Ai ai(&snake,&hamilton_solver);
+            Human human(&snake);
+            GameManager game(&map,&food,&object,{&ai});
+            VisualizeThread vis(&game,intervel);
+            vis.start();
+        
+            game.start(food_num,object_num);
+        
+            // while (1);
+            game.run();
+            vis.stop();
         }
         
         
         
         
     }else{
+        //双人模式
         Snake snake1(&map,&food,3,3,Direction::RIGHT,1);
         Snake snake2(&map,&food,6,6,Direction::LEFT,1);
         Human human1(&snake1,'w','s','a','d');
-        Human human2(&snake2,'i','k','j','l');
-        GameManager game(&map,&food,&object,{&human1,&human2});
-        VisualizeThread vis(&game,intervel);
+        //Human human2(&snake2,'i','k','j','l');
+        //GameManager game(&map,&food,&object,{&human1,&human2});
+        GameManager game(&map,&food,&object,&human1);
+        VisualizeThread vis(&game, &snake1, &snake2, intervel);
         vis.start();
         game.start(food_num,object_num);
         game.run();

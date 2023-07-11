@@ -2,10 +2,13 @@
 #ifndef _MAP_HPP_
 #define _MAP_HPP_
 
+//#include "snake.hpp"
 #include <vector>
 #include <queue>
 #include <unordered_set>
 #include <iostream>
+#include <SFML/Graphics.hpp>
+#include <string>
 namespace SNAKE{
 
 enum class CellType{
@@ -15,14 +18,7 @@ enum class CellType{
         WALL,
         OCCUPIED,
     };
-    enum class Direction{
-        UP,
-        DOWN,
-        LEFT,
-        RIGHT,
-        NONE,
-    };
-    Direction opposite(Direction d);
+
 
 class Point{
     public:
@@ -49,6 +45,16 @@ struct PointHash {
         return seed;
     }
 };
+enum class Direction{
+    UP,
+    DOWN,
+    LEFT,
+    RIGHT,
+    NONE,
+};
+Direction opposite(Direction d);
+
+Direction GetRandomDirection();
 class BaseMap{
 public:
     int size;
@@ -57,6 +63,7 @@ public:
     BaseMap(int size):size(size){};
     virtual void init(){;};
     virtual void update(){;};
+    virtual void initui(){;};
 };
 
 class GridMap: public BaseMap{
@@ -77,6 +84,7 @@ class GridMap: public BaseMap{
         };
         void init();
         void update();
+        void initui();
         GridMap(int size,double grid_size,std::unordered_set<Point,PointHash> obstacles):GridMap(size,grid_size){
             
             
@@ -113,7 +121,7 @@ class GridMap: public BaseMap{
         CellType getCell(int x, int y);
         int getSize();
         double getGridSize();
-        void showMap() const;
+        void showMap(SNAKE::Point head1, SNAKE::Point head2, SNAKE::Direction dir1, SNAKE::Direction dir2) const;
         bool is_inrange(int x, int y){
             if (x < 0 || x >= size || y < 0 || y >= size)
             {

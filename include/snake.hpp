@@ -9,12 +9,6 @@
 #include <cstdlib>
 namespace SNAKE
 {
-    
-
-    Direction GetRandomDirection();
-
-
-
     class SnakeBlock{
         protected:
             GridMap* map;

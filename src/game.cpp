@@ -4,19 +4,60 @@
 #include <chrono>
 SNAKE::Direction SNAKE::Human::getNextDirection(){
     Direction nextdirection=snake->getDirection();
-    if (_kbhit())
-        {
-            char c = getch();
-            
-            if (c==up){
+    //if (_kbhit())
+    //    {
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && this->up=='w')
+            {
+                // 处理往上走的逻辑
                 nextdirection=snake->changeDirection(Direction::UP);
-            }else if (c==down){
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) && this->down=='s')
+            {
+                // 处理往下走的逻辑
                 nextdirection=snake->changeDirection(Direction::DOWN);
-            }else if (c==left){
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A) && this->left=='a')
+            {
+                // 处理往左走的逻辑
                 nextdirection=snake->changeDirection(Direction::LEFT);
-            }else if (c==right){
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D) && this->right=='d')
+            {
+                // 处理往右走的逻辑
                 nextdirection=snake->changeDirection(Direction::RIGHT);
             }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::I) && this->up=='i')
+            {
+                // 处理往上走的逻辑
+                nextdirection=snake->changeDirection(Direction::UP);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::K) && this->down=='k')
+            {
+                // 处理往下走的逻辑
+                nextdirection=snake->changeDirection(Direction::DOWN);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::J) && this->left=='j')
+            {
+                // 处理往左走的逻辑
+                nextdirection=snake->changeDirection(Direction::LEFT);
+            }
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::L) && this->right=='l')
+            {
+                // 处理往右走的逻辑
+                nextdirection=snake->changeDirection(Direction::RIGHT);
+            }
+            
+            // char c = getch();
+            
+            // if (c==up){
+            //     nextdirection=snake->changeDirection(Direction::UP);
+            // }else if (c==down){
+            //     nextdirection=snake->changeDirection(Direction::DOWN);
+            // }else if (c==left){
+            //     nextdirection=snake->changeDirection(Direction::LEFT);
+            // }else if (c==right){
+            //     nextdirection=snake->changeDirection(Direction::RIGHT);
+            // }
             
 
             // switch (c)
@@ -36,7 +77,7 @@ SNAKE::Direction SNAKE::Human::getNextDirection(){
             // default:
             //     break;
             // }
-        }
+        //}
     return nextdirection;
 }
 
@@ -49,6 +90,7 @@ SNAKE::Direction SNAKE::Ai::getNextDirection(){
 }
 
 void SNAKE::GameManager::start(int food_num,int object_num){
+    
     this->isOver=false;
     this->map->init();
     this->food->generateNFoodRandomly(food_num);
