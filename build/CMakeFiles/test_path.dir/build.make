@@ -94,10 +94,6 @@ test_path: CMakeFiles/test_path.dir/test_path.cpp.o
 test_path: CMakeFiles/test_path.dir/build.make
 test_path: libGreedySnake.so
 test_path: /usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.5.2
-test_path: /usr/lib/x86_64-linux-gnu/libSM.so
-test_path: /usr/lib/x86_64-linux-gnu/libICE.so
-test_path: /usr/lib/x86_64-linux-gnu/libX11.so
-test_path: /usr/lib/x86_64-linux-gnu/libXext.so
 test_path: CMakeFiles/test_path.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jamil/GreedySnake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_path"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_path.dir/link.txt --verbose=$(VERBOSE)

@@ -1,38 +1,40 @@
 #include "client.hpp"
-
-int StratClient()
+using namespace SNAKE;
+void NETWORK::Client::StartClient()
 {
-    sf::TcpSocket socket;
-
-    if (socket.connect("127.0.0.1", 5000) != sf::Socket::Done)
+    if ((*socket).connect("127.0.0.1", 5000) != sf::Socket::Done)
     {
         std::cout << "Failed to connect to server." << std::endl;
-        return -1;
     }
 
     std::cout << "Connected to server!" << std::endl;
+}
 
-    std::string message = "Hello, server!";
-    if (socket.send(message.c_str(), message.length() + 1) != sf::Socket::Done)
+void NETWORK::Client::SentAndReceive()
+{
+    // 检查是否需要接收服务器端传来的Snake1的信息
+    sf::Packet receivePacket;
+    if ((*socket).receive(receivePacket) == sf::Socket::Done)
     {
-        std::cout << "Failed to send message." << std::endl;
-        return -1;
+        std::string receivedData;
+        receivePacket >> receivedData;
+
+        // 解析接收到的Snake1信息并更新客户端的Snake1对象
+        // 这里假设Snake信息是字符串形式，每个属性之间用逗号分隔
+        // 根据实际情况修改解析的方式
+        (*snake1).update(receivedData);
     }
 
-    std::cout << "Message sent to server: " << message << std::endl;
+    // 将客户端的Snake2信息发送给服务器端
+    sf::Packet sendPacket;
+    sendPacket << (*snake2).toString(); // 将Snake2信息打包为Packet
+    (*socket).send(sendPacket); // 发送Packet给服务器端
+}
 
-    char buffer[1024];
-    std::size_t received;
-
-    if (socket.receive(buffer, sizeof(buffer), received) != sf::Socket::Done)
+void NETWORK::Client::Run()
+{
+    while (true)
     {
-        std::cout << "Failed to receive message." << std::endl;
-        return -1;
+        SentAndReceive();
     }
-
-    std::cout << "Received message from server: " << buffer << std::endl;
-
-    socket.disconnect();
-
-    return 0;
 }

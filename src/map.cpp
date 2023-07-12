@@ -3,7 +3,7 @@
 const int TILE_SIZE = 80;
 
 const std::string WALL_IMAGE_PATH = "../img/wall.png";
-const std::string EMPTY_IMAGE_PATH = "../img/empty.png";
+const std::string EMPTY_IMAGE_PATH = "../img/empty2.png";
 const std::string FOOD_IMAGE_PATH = "../img/food.png";
 const std::string OBSTACLE_IMAGE_PATH = "../img/obstacle.png";
 const std::string SNAKERIGHT_IMAGE_PATH = "../img/righthead.png";
@@ -105,7 +105,6 @@ void SNAKE::GridMap::init(){
                 map[i][j] = CellType::WALL;
             else
                 map[i][j] = CellType::EMPTY;
-            // map[i][j] = CellType::EMPTY;
         }
     }
 }

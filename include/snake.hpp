@@ -156,6 +156,9 @@ namespace SNAKE
 
     class SnakeHead: public SnakeBlock{
         public:
+            SnakeHead() : SnakeBlock(nullptr, nullptr, 0, 0, Direction::UP, 0) {
+            ;
+            };
             SnakeHead(GridMap*_map,Food* _food, int x,int y,Direction direction,int velocity,
             SnakeBlock* next = nullptr,SnakeBlock* prev = nullptr):SnakeBlock(_map,_food,x,y,direction,velocity,next,prev){
             };
@@ -205,10 +208,11 @@ namespace SNAKE
             int score;
             
         public:
-        GridMap* map;
+            GridMap* map;
             Food* food;
             SnakeHead head;
             bool _isDead;
+            Snake(){;};
             Snake(GridMap* _map,Food* _food,int x,int y,Direction direction,int velocity,int length = 1):
             head(_map,_food,x,y,direction,velocity),map(_map),food(_food){
                 this->length = length;
@@ -362,6 +366,10 @@ namespace SNAKE
                 return true;
             }
 
+
+            std::string toString();
+            void update(std::string);
+            
     };
 
 

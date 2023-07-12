@@ -3,9 +3,10 @@
 sf::RenderWindow window;
 void SNAKE::VisualizeThread::run()
 {
+    static bool first = true;
     while (this->running)
     {
-        static bool first = true;
+        
         if (first)
         {
             this->game->map->initui();

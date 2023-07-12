@@ -1,6 +1,7 @@
 map_size: 10
-game_mode: 2 # 0 for single, 1 for multi, 2 for online
-game_speed: 1 # 0 for low ,1 for normal, 2 for high
+game_mode: 0 # 0 for single, 1 for multi, 2 for online
+game_speed: 0 # 0 for low ,1 for normal, 2 for high
 ai_solver: 0 # 0 for greedy, 1 for hamilton
 food_num: 2
 object_num: 2
+server_or_client: 1 # 0 for server, 1 for client

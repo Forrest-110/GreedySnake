@@ -4,6 +4,8 @@
 #include "snake.hpp"
 #include "object.hpp"
 #include "game.hpp"
+#include "network/server.hpp"
+#include "network/client.hpp"
 #include <conio.h>
 #include <yaml-cpp/yaml.h>
 using namespace SNAKE;
@@ -17,6 +19,7 @@ struct Options{
     int object_num;
 
     enum struct AIsolver{ greedy, hamilton } ai_solver;
+    enum struct SERVER_OR_CLIENT{ server, client } server_or_client;
     
 
 };
@@ -24,13 +27,16 @@ struct Options{
 Options readFromArg(int argc, char** argv){
     Options options;
     if (argc==1){
+        //默认参数
         options.map_size=10;
         options.game_mode=Options::MODE::ai;
         options.game_speed=Options::SPEED::medium;
         options.food_num=1;
         options.object_num=1;
         options.ai_solver=Options::AIsolver::hamilton;
+        options.server_or_client=Options::SERVER_OR_CLIENT::server;
     }else if (argc==2){
+        //读取配置文件
         YAML::Node config = YAML::LoadFile(argv[1]);
         options.map_size=config["map_size"].as<int>();
         options.game_mode=static_cast<Options::MODE>(config["game_mode"].as<int>());
@@ -38,6 +44,7 @@ Options readFromArg(int argc, char** argv){
         options.food_num=config["food_num"].as<int>();
         options.object_num=config["object_num"].as<int>();
         options.ai_solver=static_cast<Options::AIsolver>(config["ai_solver"].as<int>());
+        options.server_or_client=static_cast<Options::SERVER_OR_CLIENT>(config["server_or_client"].as<int>());
     }else{
         std::cout<<"Usage: "<<argv[0]<<" [config_file]"<<std::endl;
         exit(1);
@@ -137,12 +144,51 @@ int main(int argc, char** argv){
         
     }else{
         //双人模式
+        //联网对战
+        // Snake snake1(&map,&food,3,3,Direction::RIGHT,1);
+        // Snake snake2(&map,&food,6,6,Direction::LEFT,1);
+        // if (options.server_or_client==Options::SERVER_OR_CLIENT::server){
+        //     NETWORK::Server server(&snake1, &snake2);
+        //     server.StartServer();
+        //     Human human1(&snake1,'w','s','a','d');
+        //     GameManager game(&map,&food,&object,&human1);
+        //     VisualizeThread vis(&game, &snake1, &snake2, intervel);
+        //     std::thread networkThread([&server]() {
+        //         server.Run();
+        //     });
+        //     vis.start();
+        //     game.start(food_num,object_num);
+        //     game.run();
+        //     game.stop();
+        //     vis.stop();
+        //     networkThread.join();
+        // }else if (options.server_or_client==Options::SERVER_OR_CLIENT::client){
+        //     sf::TcpSocket socket;
+        //     NETWORK::Client client(&snake1, &snake2, &socket);
+        //     client.StartClient();
+        //     Human human2(&snake2,'i','k','j','l');
+        //     GameManager game(&map,&food,&object,&human2);
+        //     VisualizeThread vis(&game, &snake1, &snake2, intervel);
+        //     std::thread networkThread([&client]() {
+        //         client.Run();
+        //     });
+        //     vis.start();
+        //     game.start(food_num,object_num);
+        //     game.run();
+        //     game.stop();
+        //     vis.stop();
+        //     networkThread.join();
+        // }else {
+        //     std::cout<<"Error: server or client"<<std::endl;
+        //     exit(1);
+        // }
+        
+        //本地双人
         Snake snake1(&map,&food,3,3,Direction::RIGHT,1);
         Snake snake2(&map,&food,6,6,Direction::LEFT,1);
         Human human1(&snake1,'w','s','a','d');
-        //Human human2(&snake2,'i','k','j','l');
-        //GameManager game(&map,&food,&object,{&human1,&human2});
-        GameManager game(&map,&food,&object,&human1);
+        Human human2(&snake2,'i','k','j','l');
+        GameManager game(&map,&food,&object,{&human1,&human2});
         VisualizeThread vis(&game, &snake1, &snake2, intervel);
         vis.start();
         game.start(food_num,object_num);

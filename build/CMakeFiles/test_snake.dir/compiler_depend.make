@@ -332,6 +332,20 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
   /usr/include/c++/11/ratio \
   /usr/include/c++/11/limits \
   /usr/include/c++/11/bits/parse_numbers.h \
+  ../include/network/server.hpp \
+  /usr/include/SFML/Network.hpp \
+  /usr/include/SFML/Network/Ftp.hpp \
+  /usr/include/SFML/Network/Export.hpp \
+  /usr/include/SFML/Network/TcpSocket.hpp \
+  /usr/include/SFML/Network/Socket.hpp \
+  /usr/include/SFML/Network/SocketHandle.hpp \
+  /usr/include/SFML/Network/Http.hpp \
+  /usr/include/SFML/Network/IpAddress.hpp \
+  /usr/include/SFML/Network/Packet.hpp \
+  /usr/include/SFML/Network/SocketSelector.hpp \
+  /usr/include/SFML/Network/TcpListener.hpp \
+  /usr/include/SFML/Network/UdpSocket.hpp \
+  ../include/network/client.hpp \
   /usr/include/conio.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
@@ -1212,8 +1226,6 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 
 /usr/include/boost/mpl/aux_/config/gpu.hpp:
 
-/usr/include/boost/mpl/aux_/config/arrays.hpp:
-
 /usr/include/boost/mpl/aux_/na_assert.hpp:
 
 /usr/include/boost/mpl/arg_fwd.hpp:
@@ -1249,8 +1261,6 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 /usr/include/boost/type_traits/is_lvalue_reference.hpp:
 
 /usr/include/boost/type_traits/is_reference.hpp:
-
-/usr/include/boost/type_traits/add_rvalue_reference.hpp:
 
 /usr/include/boost/next_prior.hpp:
 
@@ -1380,8 +1390,6 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 
 /usr/include/boost/mpl/lambda_fwd.hpp:
 
-/usr/include/boost/mpl/aux_/na_spec.hpp:
-
 /usr/include/boost/mpl/aux_/nested_type_wknd.hpp:
 
 /usr/include/boost/preprocessor/punctuation/comma.hpp:
@@ -1461,6 +1469,32 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 /usr/include/boost/predef/os/qnxnto.h:
 
 /usr/include/boost/predef/os/os400.h:
+
+/usr/include/boost/type_traits/is_union.hpp:
+
+/usr/include/boost/predef/os/irix.h:
+
+/usr/include/boost/predef/os/hpux.h:
+
+/usr/include/boost/predef/os/cygwin.h:
+
+/usr/include/boost/predef/os/bsd/net.h:
+
+/usr/include/yaml-cpp/node/parse.h:
+
+/usr/include/boost/predef/os/bsd/open.h:
+
+/usr/include/boost/predef/hardware/simd/ppc.h:
+
+/usr/include/boost/predef/os/bsd/free.h:
+
+/usr/include/boost/predef/os/bsd/dragonfly.h:
+
+/usr/include/boost/predef/os/bsd/bsdi.h:
+
+/usr/include/boost/predef/os/bsd.h:
+
+/usr/include/boost/predef/os/android.h:
 
 /usr/include/SFML/System/Vector3.hpp:
 
@@ -1572,8 +1606,6 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
-/usr/include/boost/predef/os/hpux.h:
-
 /usr/include/asm-generic/errno.h:
 
 /usr/include/boost/type_traits/remove_all_extents.hpp:
@@ -1666,8 +1698,6 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 
 /usr/include/boost/predef/version_number.h:
 
-/usr/include/c++/11/locale:
-
 /usr/include/ctype.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
@@ -1697,6 +1727,10 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 /usr/include/boost/config/stdlib/libstdcpp3.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/boost/mpl/aux_/config/arrays.hpp:
+
+/usr/include/SFML/Network.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
@@ -1878,10 +1912,6 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 
 /usr/include/c++/11/streambuf:
 
-/usr/include/boost/type_traits/is_union.hpp:
-
-/usr/include/boost/predef/os/irix.h:
-
 /usr/include/c++/11/bits/concept_check.h:
 
 /usr/include/boost/smart_ptr/detail/sp_counted_base_std_atomic.hpp:
@@ -1924,8 +1954,6 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 
 /usr/include/SFML/System/Thread.hpp:
 
-/usr/include/SFML/System/Export.hpp:
-
 /usr/include/c++/11/bits/ostream.tcc:
 
 /usr/include/boost/config/no_tr1/memory.hpp:
@@ -1943,6 +1971,10 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 /usr/include/boost/type_traits/detail/config.hpp:
 
 /usr/include/c++/11/bits/vector.tcc:
+
+/usr/include/boost/type_traits/add_rvalue_reference.hpp:
+
+/usr/include/SFML/Network/Ftp.hpp:
 
 /usr/include/SFML/System/Sleep.hpp:
 
@@ -1994,6 +2026,8 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
 
+/usr/include/SFML/Network/Http.hpp:
+
 /usr/include/boost/mpl/aux_/config/preprocessor.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/environments.h:
@@ -2017,6 +2051,10 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 /usr/include/c++/11/ctime:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
+
+/usr/include/boost/mpl/aux_/na_spec.hpp:
+
+/usr/include/SFML/Network/TcpListener.hpp:
 
 /usr/include/SFML/System/Vector2.hpp:
 
@@ -2049,6 +2087,10 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 /usr/include/boost/predef/compiler/clang.h:
 
 /usr/include/SFML/System/Utf.inl:
+
+/usr/include/boost/predef/os/beos.h:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
@@ -2116,6 +2158,10 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 
 /usr/include/SFML/Graphics/Transform.hpp:
 
+/usr/include/SFML/System/Export.hpp:
+
+/usr/include/SFML/Network/SocketHandle.hpp:
+
 /usr/include/c++/11/bits/stl_algobase.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
@@ -2167,12 +2213,6 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 /usr/include/boost/predef/architecture/rs6k.h:
 
 /usr/include/asm-generic/errno-base.h:
-
-/usr/include/libintl.h:
-
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/include/c++/11/bits/char_traits.h:
 
 /usr/include/SFML/Window/GlResource.hpp:
 
@@ -2282,8 +2322,6 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 
 /usr/include/SFML/Graphics/CircleShape.hpp:
 
-/usr/include/boost/predef/os/android.h:
-
 /usr/include/SFML/Graphics/Shape.hpp:
 
 /usr/include/SFML/Graphics/RenderStates.hpp:
@@ -2334,10 +2372,6 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 
 /usr/include/SFML/Graphics/RenderWindow.hpp:
 
-/usr/include/yaml-cpp/parser.h:
-
-/usr/include/boost/core/demangle.hpp:
-
 /usr/include/SFML/Graphics/Shader.hpp:
 
 /usr/include/SFML/Graphics/Glsl.hpp:
@@ -2369,6 +2403,8 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 /usr/include/boost/preprocessor/logical/bool.hpp:
 
 ../include/solver/path.hpp:
+
+/usr/include/SFML/Network/Socket.hpp:
 
 /usr/include/boost/predef/library/std/stdcpp3.h:
 
@@ -2405,6 +2441,36 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 /usr/include/c++/11/limits:
 
 /usr/include/c++/11/bits/parse_numbers.h:
+
+/usr/include/yaml-cpp/parser.h:
+
+/usr/include/boost/core/demangle.hpp:
+
+../include/network/server.hpp:
+
+/usr/include/libintl.h:
+
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/include/c++/11/bits/char_traits.h:
+
+/usr/include/SFML/Network/Export.hpp:
+
+/usr/include/c++/11/locale:
+
+/usr/include/SFML/Network/Packet.hpp:
+
+/usr/include/SFML/Network/SocketSelector.hpp:
+
+/usr/include/SFML/Network/TcpSocket.hpp:
+
+/usr/include/SFML/Network/UdpSocket.hpp:
+
+/usr/include/boost/predef/os/haiku.h:
+
+/usr/include/boost/predef/os/ios.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/boost/type_traits/has_logical_and.hpp:
 
@@ -2462,9 +2528,9 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 
 /usr/include/boost/predef/architecture/z.h:
 
-/usr/include/c++/11/bits/stl_raw_storage_iter.h:
+../include/network/client.hpp:
 
-/usr/include/boost/predef/os/bsd/net.h:
+/usr/include/c++/11/bits/stl_raw_storage_iter.h:
 
 /usr/include/SFML/System/FileInputStream.hpp:
 
@@ -2696,6 +2762,8 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 
 /usr/include/boost/type_traits/is_nothrow_move_assignable.hpp:
 
+/usr/include/SFML/Network/IpAddress.hpp:
+
 /usr/include/boost/predef/os.h:
 
 /usr/include/SFML/Graphics/PrimitiveType.hpp:
@@ -2712,8 +2780,6 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 
 /usr/include/boost/predef/compiler/ekopath.h:
 
-/usr/include/boost/predef/os/bsd.h:
-
 /usr/include/boost/type_traits/conditional.hpp:
 
 /usr/include/linux/falloc.h:
@@ -2721,8 +2787,6 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /usr/include/boost/predef/compiler/gcc.h:
-
-/usr/include/boost/predef/os/bsd/bsdi.h:
 
 /usr/include/yaml-cpp/node/detail/impl.h:
 
@@ -2785,25 +2849,3 @@ CMakeFiles/test_snake.dir/test.cpp.o: ../test.cpp \
 /usr/include/c++/11/functional:
 
 /usr/include/boost/predef/os/aix.h:
-
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/include/boost/predef/os/beos.h:
-
-/usr/include/boost/predef/os/bsd/dragonfly.h:
-
-/usr/include/boost/predef/hardware/simd/ppc.h:
-
-/usr/include/boost/predef/os/bsd/free.h:
-
-/usr/include/yaml-cpp/node/parse.h:
-
-/usr/include/boost/predef/os/bsd/open.h:
-
-/usr/include/boost/predef/os/cygwin.h:
-
-/usr/include/boost/predef/os/ios.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/boost/predef/os/haiku.h:

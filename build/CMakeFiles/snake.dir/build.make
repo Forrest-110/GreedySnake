@@ -94,10 +94,6 @@ snake: CMakeFiles/snake.dir/run.cpp.o
 snake: CMakeFiles/snake.dir/build.make
 snake: libGreedySnake.so
 snake: /usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.5.2
-snake: /usr/lib/x86_64-linux-gnu/libSM.so
-snake: /usr/lib/x86_64-linux-gnu/libICE.so
-snake: /usr/lib/x86_64-linux-gnu/libX11.so
-snake: /usr/lib/x86_64-linux-gnu/libXext.so
 snake: CMakeFiles/snake.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jamil/GreedySnake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable snake"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/snake.dir/link.txt --verbose=$(VERBOSE)

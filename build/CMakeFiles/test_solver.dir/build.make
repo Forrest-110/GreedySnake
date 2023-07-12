@@ -94,10 +94,6 @@ test_solver: CMakeFiles/test_solver.dir/test_solver.cpp.o
 test_solver: CMakeFiles/test_solver.dir/build.make
 test_solver: libGreedySnake.so
 test_solver: /usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.5.2
-test_solver: /usr/lib/x86_64-linux-gnu/libSM.so
-test_solver: /usr/lib/x86_64-linux-gnu/libICE.so
-test_solver: /usr/lib/x86_64-linux-gnu/libX11.so
-test_solver: /usr/lib/x86_64-linux-gnu/libXext.so
 test_solver: CMakeFiles/test_solver.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jamil/GreedySnake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_solver"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_solver.dir/link.txt --verbose=$(VERBOSE)

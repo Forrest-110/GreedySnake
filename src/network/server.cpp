@@ -1,6 +1,9 @@
 #include "server.hpp"
+using namespace SNAKE;
 
-int StartServer()
+
+
+void NETWORK::Server::StartServer()
 {
     sf::TcpListener listener;
     sf::TcpSocket client;
@@ -8,7 +11,6 @@ int StartServer()
     if (listener.listen(5000) != sf::Socket::Done)
     {
         std::cout << "Failed to bind socket to port 5000." << std::endl;
-        return -1;
     }
 
     std::cout << "Server is running and listening on port 5000." << std::endl;
@@ -16,33 +18,35 @@ int StartServer()
     if (listener.accept(client) != sf::Socket::Done)
     {
         std::cout << "Failed to accept client connection." << std::endl;
-        return -1;
     }
 
     std::cout << "Client connected!" << std::endl;
+}
 
-    char buffer[1024];
-    std::size_t received;
+void NETWORK::Server::SentAndReceive(){
+        // 将服务器端的Snake1信息发送给客户端
+        sf::Packet sendPacket;
+        sendPacket << (*snake1).toString(); // 将Snake1信息打包为Packet
+        (*client).send(sendPacket); // 发送Packet给客户端
 
-    if (client.receive(buffer, sizeof(buffer), received) != sf::Socket::Done)
+        // 检查是否需要接收客户端传来的Snake2的信息
+        sf::Packet receivePacket;
+        if ((*client).receive(receivePacket) == sf::Socket::Done) {
+            std::string receivedData;
+            receivePacket >> receivedData;
+
+            // 解析接收到的Snake2信息并更新服务器端的Snake2对象
+            // 这里假设Snake信息是字符串形式，每个属性之间用逗号分隔
+            // 根据实际情况修改解析的方式
+            //std::vector<std::string> data = parseSnakeData(receivedData);
+            (*snake2).update(receivedData);
+        }
+}
+
+void NETWORK::Server::Run()
+{
+    while (true)
     {
-        std::cout << "Failed to receive message." << std::endl;
-        return -1;
+        SentAndReceive();
     }
-
-    std::cout << "Received message from client: " << buffer << std::endl;
-
-    std::string message = "Hello, client!";
-    if (client.send(message.c_str(), message.length() + 1) != sf::Socket::Done)
-    {
-        std::cout << "Failed to send message." << std::endl;
-        return -1;
-    }
-
-    std::cout << "Message sent to client: " << message << std::endl;
-
-    client.disconnect();
-    listener.close();
-
-    return 0;
 }

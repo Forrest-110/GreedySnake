@@ -110,11 +110,11 @@ void SNAKE::GameManager::thread_run(SNAKE::BasePlayer* player){
             player->reset_goal();
         }
         if (player->snake->_isDead){
-            std::cout<<"Player  is dead"<<std::endl;
+            std::cout<<"Player is dead"<<std::endl;
             goto OVER;
             break;
         }
-        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
     }
     OVER:
         std::cout<<"Game Over"<<std::endl;
@@ -135,13 +135,13 @@ void SNAKE::GameManager::run(){
             player->reset_goal();
         }
         if (player->snake->_isDead){
-            std::cout<<"Player  is dead"<<std::endl;
+            std::cout<<"Player is dead"<<std::endl;
             goto OVER;
             break;
         }
         }
         
-        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
     }
     OVER:
         std::cout<<"Game Over"<<std::endl;
